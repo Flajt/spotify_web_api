@@ -1,0 +1,17 @@
+targets:
+  $default:
+    sources:     
+      include:
+      - lib/**
+      - $package$
+      - lib/openapi/**
+      exclude:
+        - /lib/openapi/README.txt
+    builders:
+      swagger_dart_code_generator:
+        options:
+          input_folder: "lib/openapi/"
+          output_folder: "lib/logic/generated/"
+          with_base_url: true
+          with_converter: true
+    
