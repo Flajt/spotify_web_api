@@ -9,11 +9,11 @@ import 'package:chopper/chopper.dart';
 import 'client_mapping.dart';
 import 'dart:async';
 import 'package:chopper/chopper.dart' as chopper;
-import 'SpotifyWeb.enums.swagger.dart' as enums;
-export 'SpotifyWeb.enums.swagger.dart';
+import 'spotify_web.enums.swagger.dart' as enums;
+export 'spotify_web.enums.swagger.dart';
 
-part 'SpotifyWeb.swagger.chopper.dart';
-part 'SpotifyWeb.swagger.g.dart';
+part 'spotify_web.swagger.chopper.dart';
+part 'spotify_web.swagger.g.dart';
 
 // **************************************************************************
 // SwaggerChopperGenerator
@@ -42,7 +42,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Album
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the album.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the album.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response<Object>> albumsIdGet({
     required String? id,
@@ -53,7 +53,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Album
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the album.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the album.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Get(path: '/albums/{id}')
   Future<chopper.Response<Object>> _albumsIdGet({
@@ -63,7 +63,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Several Albums
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the albums. Maximum: 20 IDs.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response<ManyAlbums>> albumsGet({
     required String? ids,
@@ -76,7 +76,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Several Albums
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the albums. Maximum: 20 IDs.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Get(path: '/albums')
   Future<chopper.Response<ManyAlbums>> _albumsGet({
@@ -86,7 +86,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Album Tracks
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the album.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the album.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
   ///@param offset The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
@@ -102,7 +102,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Album Tracks
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the album.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the album.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
   ///@param offset The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
@@ -116,21 +116,21 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Artist
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the artist.
   Future<chopper.Response<Object>> artistsIdGet({required String? id}) {
     return _artistsIdGet(id: id);
   }
 
   ///Get Artist
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the artist.
   @Get(path: '/artists/{id}')
   Future<chopper.Response<Object>> _artistsIdGet(
       {@Path('id') required String? id});
 
   ///Get Several Artists
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the artists. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the artists. Maximum: 50 IDs.
   Future<chopper.Response<ManyArtists>> artistsGet({required String? ids}) {
     generatedMapping.putIfAbsent(
         ManyArtists, () => ManyArtists.fromJsonFactory);
@@ -140,14 +140,14 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Several Artists
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the artists. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the artists. Maximum: 50 IDs.
   @Get(path: '/artists')
   Future<chopper.Response<ManyArtists>> _artistsGet(
       {@Query('ids') required String? ids});
 
   ///Get Artist's Albums
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the artist.
   ///@param include_groups A comma-separated list of keywords that will be used to filter the response. If not supplied, all album types will be returned. <br/> Valid values are:<br/>- `album`<br/>- `single`<br/>- `appears_on`<br/>- `compilation`<br/>For example: `include_groups=album,single`.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
@@ -169,7 +169,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Artist's Albums
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the artist.
   ///@param include_groups A comma-separated list of keywords that will be used to filter the response. If not supplied, all album types will be returned. <br/> Valid values are:<br/>- `album`<br/>- `single`<br/>- `appears_on`<br/>- `compilation`<br/>For example: `include_groups=album,single`.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
@@ -185,7 +185,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Artist's Top Tracks
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the artist.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response<ManyTracks>> artistsIdTopTracksGet({
     required String? id,
@@ -198,7 +198,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Artist's Top Tracks
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the artist.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Get(path: '/artists/{id}/top-tracks')
   Future<chopper.Response<ManyTracks>> _artistsIdTopTracksGet({
@@ -208,7 +208,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Artist's Related Artists
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the artist.
   Future<chopper.Response<ManyArtists>> artistsIdRelatedArtistsGet(
       {required String? id}) {
     generatedMapping.putIfAbsent(
@@ -219,7 +219,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Artist's Related Artists
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the artist.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the artist.
   @Get(path: '/artists/{id}/related-artists')
   Future<chopper.Response<ManyArtists>> _artistsIdRelatedArtistsGet(
       {@Path('id') required String? id});
@@ -227,7 +227,7 @@ abstract class SpotifyWeb extends ChopperService {
   ///Get Show
   ///
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the show.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the show.
   Future<chopper.Response<Object>> showsIdGet({
     String? market,
     required String? id,
@@ -238,7 +238,7 @@ abstract class SpotifyWeb extends ChopperService {
   ///Get Show
   ///
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the show.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the show.
   @Get(path: '/shows/{id}')
   Future<chopper.Response<Object>> _showsIdGet({
     @Query('market') String? market,
@@ -248,7 +248,7 @@ abstract class SpotifyWeb extends ChopperService {
   ///Get Several Shows
   ///
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the shows. Maximum: 50 IDs.
   Future<chopper.Response<ManySimplifiedShows>> showsGet({
     String? market,
     required String? ids,
@@ -262,7 +262,7 @@ abstract class SpotifyWeb extends ChopperService {
   ///Get Several Shows
   ///
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the shows. Maximum: 50 IDs.
   @Get(path: '/shows')
   Future<chopper.Response<ManySimplifiedShows>> _showsGet({
     @Query('market') String? market,
@@ -271,7 +271,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Show Episodes
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the show.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the show.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
   ///@param offset The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
@@ -287,7 +287,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Show Episodes
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the show.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the show.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
   ///@param offset The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
@@ -301,7 +301,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Episode
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the episode.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the episode.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response<Object>> episodesIdGet({
     required String? id,
@@ -312,7 +312,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Episode
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the episode.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the episode.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Get(path: '/episodes/{id}')
   Future<chopper.Response<Object>> _episodesIdGet({
@@ -322,7 +322,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Several Episodes
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the episodes. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the episodes. Maximum: 50 IDs.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response<ManyEpisodes>> episodesGet({
     required String? ids,
@@ -336,7 +336,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Several Episodes
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the episodes. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the episodes. Maximum: 50 IDs.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Get(path: '/episodes')
   Future<chopper.Response<ManyEpisodes>> _episodesGet({
@@ -346,7 +346,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get an Audiobook
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the audiobook.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the audiobook.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response<Object>> audiobooksIdGet({
     required String? id,
@@ -357,7 +357,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get an Audiobook
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the audiobook.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the audiobook.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Get(path: '/audiobooks/{id}')
   Future<chopper.Response<Object>> _audiobooksIdGet({
@@ -367,7 +367,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Several Audiobooks
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response<ManyAudiobooks>> audiobooksGet({
     required String? ids,
@@ -381,7 +381,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Several Audiobooks
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Get(path: '/audiobooks')
   Future<chopper.Response<ManyAudiobooks>> _audiobooksGet({
@@ -391,7 +391,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Audiobook Chapters
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the audiobook.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the audiobook.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
   ///@param offset The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
@@ -407,7 +407,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Audiobook Chapters
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the audiobook.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the audiobook.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
   ///@param offset The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
@@ -442,14 +442,14 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Save Audiobooks for Current User
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
   Future<chopper.Response> meAudiobooksPut({required String? ids}) {
     return _meAudiobooksPut(ids: ids);
   }
 
   ///Save Audiobooks for Current User
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
   @Put(
     path: '/me/audiobooks',
     optionalBody: true,
@@ -459,38 +459,36 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove User's Saved Audiobooks
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
   Future<chopper.Response> meAudiobooksDelete({required String? ids}) {
     return _meAudiobooksDelete(ids: ids);
   }
 
   ///Remove User's Saved Audiobooks
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
   @Delete(path: '/me/audiobooks')
   Future<chopper.Response> _meAudiobooksDelete(
       {@Query('ids') required String? ids});
 
   ///Check User's Saved Audiobooks
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
   Future<chopper.Response<ArrayOfBooleans>> meAudiobooksContainsGet(
       {required String? ids}) {
-    //generatedMapping.putIfAbsent(ArrayOfBooleans, () => ArrayOfBooleans.fromJsonFactory);
-
     return _meAudiobooksContainsGet(ids: ids);
   }
 
   ///Check User's Saved Audiobooks
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=18yVqkdbdRvS24c0Ilj2ci,1HGw3J3NxZO1TP1BTtVhpZ`. Maximum: 50 IDs.
   @Get(path: '/me/audiobooks/contains')
   Future<chopper.Response<ArrayOfBooleans>> _meAudiobooksContainsGet(
       {@Query('ids') required String? ids});
 
   ///Get a Chapter
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the chapter.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the chapter.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response<Object>> chaptersIdGet({
     required String? id,
@@ -501,7 +499,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get a Chapter
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the chapter.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the chapter.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Get(path: '/chapters/{id}')
   Future<chopper.Response<Object>> _chaptersIdGet({
@@ -511,7 +509,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Several Chapters
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=0IsXVP0JmcB2adSE338GkK,3ZXb8FKZGU0EHALYX6uCzU`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=0IsXVP0JmcB2adSE338GkK,3ZXb8FKZGU0EHALYX6uCzU`. Maximum: 50 IDs.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response<ManyChapters>> chaptersGet({
     required String? ids,
@@ -525,7 +523,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Several Chapters
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=0IsXVP0JmcB2adSE338GkK,3ZXb8FKZGU0EHALYX6uCzU`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=0IsXVP0JmcB2adSE338GkK,3ZXb8FKZGU0EHALYX6uCzU`. Maximum: 50 IDs.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Get(path: '/chapters')
   Future<chopper.Response<ManyChapters>> _chaptersGet({
@@ -535,7 +533,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Track
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the track.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the track.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response<Object>> tracksIdGet({
     required String? id,
@@ -546,7 +544,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Track
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the track.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the track.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Get(path: '/tracks/{id}')
   Future<chopper.Response<Object>> _tracksIdGet({
@@ -557,7 +555,7 @@ abstract class SpotifyWeb extends ChopperService {
   ///Get Several Tracks
   ///
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
   Future<chopper.Response<ManyTracks>> tracksGet({
     String? market,
     required String? ids,
@@ -570,7 +568,7 @@ abstract class SpotifyWeb extends ChopperService {
   ///Get Several Tracks
   ///
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
   @Get(path: '/tracks')
   Future<chopper.Response<ManyTracks>> _tracksGet({
     @Query('market') String? market,
@@ -636,7 +634,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Playlist
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param fields Filters for the query: a comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the playlist''s description and URI: `fields=description,uri`. A dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects. For example, to get just the added date and user ID of the adder: `fields=tracks.items(added_at,added_by.id)`. Use multiple parentheses to drill down into nested objects, for example: `fields=tracks.items(track(name,href,album(name,href)))`. Fields can be excluded by prefixing them with an exclamation mark, for example: `fields=tracks.items(track(name,href,album(!name,href)))`
   ///@param additional_types A comma-separated list of item types that your client supports besides the default `track` type. Valid types are: `track` and `episode`.<br/> _**Note**: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future._<br/> In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the `type` field of each object.
@@ -655,7 +653,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Playlist
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param fields Filters for the query: a comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the playlist''s description and URI: `fields=description,uri`. A dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects. For example, to get just the added date and user ID of the adder: `fields=tracks.items(added_at,added_by.id)`. Use multiple parentheses to drill down into nested objects, for example: `fields=tracks.items(track(name,href,album(name,href)))`. Fields can be excluded by prefixing them with an exclamation mark, for example: `fields=tracks.items(track(name,href,album(!name,href)))`
   ///@param additional_types A comma-separated list of item types that your client supports besides the default `track` type. Valid types are: `track` and `episode`.<br/> _**Note**: This parameter was introduced to allow existing clients to maintain their current behaviour and might be deprecated in the future._<br/> In addition to providing this parameter, make sure that your client properly handles cases of new types in the future by checking against the `type` field of each object.
@@ -669,7 +667,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Change Playlist Details
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   Future<chopper.Response> playlistsPlaylistIdPut({
     required String? playlistId,
     required PlaylistsPlaylistIdPut$RequestBody? body,
@@ -679,7 +677,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Change Playlist Details
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   @Put(
     path: '/playlists/{playlist_id}',
     optionalBody: true,
@@ -691,7 +689,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Playlist Items
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param fields Filters for the query: a comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the total number of items and the request limit:<br/>`fields=total,limit`<br/>A dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects. For example, to get just the added date and user ID of the adder:<br/>`fields=items(added_at,added_by.id)`<br/>Use multiple parentheses to drill down into nested objects, for example:<br/>`fields=items(track(name,href,album(name,href)))`<br/>Fields can be excluded by prefixing them with an exclamation mark, for example:<br/>`fields=items.track.album(!external_urls,images)`
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 100.
@@ -716,7 +714,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Playlist Items
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   ///@param fields Filters for the query: a comma-separated list of the fields to return. If omitted, all fields are returned. For example, to get just the total number of items and the request limit:<br/>`fields=total,limit`<br/>A dot separator can be used to specify non-reoccurring fields, while parentheses can be used to specify reoccurring fields within objects. For example, to get just the added date and user ID of the adder:<br/>`fields=items(added_at,added_by.id)`<br/>Use multiple parentheses to drill down into nested objects, for example:<br/>`fields=items(track(name,href,album(name,href)))`<br/>Fields can be excluded by prefixing them with an exclamation mark, for example:<br/>`fields=items.track.album(!external_urls,images)`
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 100.
@@ -734,9 +732,9 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Add Items to Playlist
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   ///@param position The position to insert the items, a zero-based index. For example, to insert the items in the first position: `position=0`; to insert the items in the third position: `position=2`. If omitted, the items will be appended to the playlist. Items are added in the order they are listed in the query string or request body.
-  ///@param uris A comma-separated list of [Spotify URIs](/documentation/web-api/#spotify-uris-and-ids) to add, can be track or episode URIs. For example:<br/>`uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh, spotify:track:1301WleyT98MSxVHPZCA6M, spotify:episode:512ojhOuo1ktJprKbVcKyQ`<br/>A maximum of 100 items can be added in one request. <br/> _**Note**: it is likely that passing a large number of item URIs as a query parameter will exceed the maximum length of the request URI. When adding a large number of items, it is recommended to pass them in the request body, see below._
+  ///@param uris A comma-separated list of [Spotify URIs](/documentation/web-api/concepts/spotify-uris-ids) to add, can be track or episode URIs. For example:<br/>`uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh, spotify:track:1301WleyT98MSxVHPZCA6M, spotify:episode:512ojhOuo1ktJprKbVcKyQ`<br/>A maximum of 100 items can be added in one request. <br/> _**Note**: it is likely that passing a large number of item URIs as a query parameter will exceed the maximum length of the request URI. When adding a large number of items, it is recommended to pass them in the request body, see below._
   Future<chopper.Response<PlaylistSnapshotId>> playlistsPlaylistIdTracksPost({
     required String? playlistId,
     int? position,
@@ -752,9 +750,9 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Add Items to Playlist
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   ///@param position The position to insert the items, a zero-based index. For example, to insert the items in the first position: `position=0`; to insert the items in the third position: `position=2`. If omitted, the items will be appended to the playlist. Items are added in the order they are listed in the query string or request body.
-  ///@param uris A comma-separated list of [Spotify URIs](/documentation/web-api/#spotify-uris-and-ids) to add, can be track or episode URIs. For example:<br/>`uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh, spotify:track:1301WleyT98MSxVHPZCA6M, spotify:episode:512ojhOuo1ktJprKbVcKyQ`<br/>A maximum of 100 items can be added in one request. <br/> _**Note**: it is likely that passing a large number of item URIs as a query parameter will exceed the maximum length of the request URI. When adding a large number of items, it is recommended to pass them in the request body, see below._
+  ///@param uris A comma-separated list of [Spotify URIs](/documentation/web-api/concepts/spotify-uris-ids) to add, can be track or episode URIs. For example:<br/>`uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh, spotify:track:1301WleyT98MSxVHPZCA6M, spotify:episode:512ojhOuo1ktJprKbVcKyQ`<br/>A maximum of 100 items can be added in one request. <br/> _**Note**: it is likely that passing a large number of item URIs as a query parameter will exceed the maximum length of the request URI. When adding a large number of items, it is recommended to pass them in the request body, see below._
   @Post(
     path: '/playlists/{playlist_id}/tracks',
     optionalBody: true,
@@ -768,8 +766,8 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Update Playlist Items
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
-  ///@param uris A comma-separated list of [Spotify URIs](/documentation/web-api/#spotify-uris-and-ids) to set, can be track or episode URIs. For example: `uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M,spotify:episode:512ojhOuo1ktJprKbVcKyQ`<br/>A maximum of 100 items can be set in one request.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
+  ///@param uris A comma-separated list of [Spotify URIs](/documentation/web-api/concepts/spotify-uris-ids) to set, can be track or episode URIs. For example: `uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M,spotify:episode:512ojhOuo1ktJprKbVcKyQ`<br/>A maximum of 100 items can be set in one request.
   Future<chopper.Response<PlaylistSnapshotId>> playlistsPlaylistIdTracksPut({
     required String? playlistId,
     String? uris,
@@ -784,8 +782,8 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Update Playlist Items
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
-  ///@param uris A comma-separated list of [Spotify URIs](/documentation/web-api/#spotify-uris-and-ids) to set, can be track or episode URIs. For example: `uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M,spotify:episode:512ojhOuo1ktJprKbVcKyQ`<br/>A maximum of 100 items can be set in one request.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
+  ///@param uris A comma-separated list of [Spotify URIs](/documentation/web-api/concepts/spotify-uris-ids) to set, can be track or episode URIs. For example: `uris=spotify:track:4iV5W9uYEdYUVa79Axb7Rh,spotify:track:1301WleyT98MSxVHPZCA6M,spotify:episode:512ojhOuo1ktJprKbVcKyQ`<br/>A maximum of 100 items can be set in one request.
   @Put(
     path: '/playlists/{playlist_id}/tracks',
     optionalBody: true,
@@ -798,7 +796,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove Playlist Items
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   Future<chopper.Response<PlaylistSnapshotId>> playlistsPlaylistIdTracksDelete({
     required String? playlistId,
     required PlaylistsPlaylistIdTracksDelete$RequestBody? body,
@@ -811,7 +809,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove Playlist Items
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   @Delete(path: '/playlists/{playlist_id}/tracks')
   Future<chopper.Response<PlaylistSnapshotId>>
       _playlistsPlaylistIdTracksDelete({
@@ -867,7 +865,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Save Albums for Current User
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the albums. Maximum: 20 IDs.
   Future<chopper.Response> meAlbumsPut({
     required String? ids,
     required MeAlbumsPut$RequestBody? body,
@@ -877,7 +875,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Save Albums for Current User
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the albums. Maximum: 20 IDs.
   @Put(
     path: '/me/albums',
     optionalBody: true,
@@ -889,7 +887,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove Users' Saved Albums
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the albums. Maximum: 20 IDs.
   Future<chopper.Response> meAlbumsDelete({
     required String? ids,
     required MeAlbumsDelete$RequestBody? body,
@@ -899,7 +897,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove Users' Saved Albums
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the albums. Maximum: 20 IDs.
   @Delete(path: '/me/albums')
   Future<chopper.Response> _meAlbumsDelete({
     @Query('ids') required String? ids,
@@ -908,17 +906,15 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Check User's Saved Albums
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the albums. Maximum: 20 IDs.
   Future<chopper.Response<ArrayOfBooleans>> meAlbumsContainsGet(
       {required String? ids}) {
-    //generatedMapping.putIfAbsent(ArrayOfBooleans, () => ArrayOfBooleans.fromJsonFactory);
-
     return _meAlbumsContainsGet(ids: ids);
   }
 
   ///Check User's Saved Albums
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the albums. Maximum: 20 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the albums. Maximum: 20 IDs.
   @Get(path: '/me/albums/contains')
   Future<chopper.Response<ArrayOfBooleans>> _meAlbumsContainsGet(
       {@Query('ids') required String? ids});
@@ -950,7 +946,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Save Tracks for Current User
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
   Future<chopper.Response> meTracksPut({
     required String? ids,
     required MeTracksPut$RequestBody? body,
@@ -960,7 +956,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Save Tracks for Current User
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
   @Put(
     path: '/me/tracks',
     optionalBody: true,
@@ -972,7 +968,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove User's Saved Tracks
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
   Future<chopper.Response> meTracksDelete({
     required String? ids,
     required MeTracksDelete$RequestBody? body,
@@ -982,7 +978,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove User's Saved Tracks
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
   @Delete(path: '/me/tracks')
   Future<chopper.Response> _meTracksDelete({
     @Query('ids') required String? ids,
@@ -991,17 +987,15 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Check User's Saved Tracks
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
   Future<chopper.Response<ArrayOfBooleans>> meTracksContainsGet(
       {required String? ids}) {
-    //generatedMapping.putIfAbsent(ArrayOfBooleans, () => ArrayOfBooleans.fromJsonFactory);
-
     return _meTracksContainsGet(ids: ids);
   }
 
   ///Check User's Saved Tracks
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
   @Get(path: '/me/tracks/contains')
   Future<chopper.Response<ArrayOfBooleans>> _meTracksContainsGet(
       {@Query('ids') required String? ids});
@@ -1033,7 +1027,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Save Episodes for Current User
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). Maximum: 50 IDs.
   Future<chopper.Response> meEpisodesPut({
     required String? ids,
     required MeEpisodesPut$RequestBody? body,
@@ -1043,7 +1037,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Save Episodes for Current User
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). Maximum: 50 IDs.
   @Put(
     path: '/me/episodes',
     optionalBody: true,
@@ -1055,7 +1049,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove User's Saved Episodes
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
   Future<chopper.Response> meEpisodesDelete({
     required String? ids,
     required MeEpisodesDelete$RequestBody? body,
@@ -1065,7 +1059,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove User's Saved Episodes
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=4iV5W9uYEdYUVa79Axb7Rh,1301WleyT98MSxVHPZCA6M`. Maximum: 50 IDs.
   @Delete(path: '/me/episodes')
   Future<chopper.Response> _meEpisodesDelete({
     @Query('ids') required String? ids,
@@ -1074,17 +1068,15 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Check User's Saved Episodes
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the episodes. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the episodes. Maximum: 50 IDs.
   Future<chopper.Response<ArrayOfBooleans>> meEpisodesContainsGet(
       {required String? ids}) {
-    //generatedMapping.putIfAbsent(ArrayOfBooleans, () => ArrayOfBooleans.fromJsonFactory);
-
     return _meEpisodesContainsGet(ids: ids);
   }
 
   ///Check User's Saved Episodes
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the episodes. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the episodes. Maximum: 50 IDs.
   @Get(path: '/me/episodes/contains')
   Future<chopper.Response<ArrayOfBooleans>> _meEpisodesContainsGet(
       {@Query('ids') required String? ids});
@@ -1112,7 +1104,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Save Shows for Current User
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the shows. Maximum: 50 IDs.
   Future<chopper.Response> meShowsPut({
     required String? ids,
     required MeShowsPut$RequestBody? body,
@@ -1122,7 +1114,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Save Shows for Current User
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the shows. Maximum: 50 IDs.
   @Put(
     path: '/me/shows',
     optionalBody: true,
@@ -1134,7 +1126,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove User's Saved Shows
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the shows. Maximum: 50 IDs.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   Future<chopper.Response> meShowsDelete({
     required String? ids,
@@ -1146,7 +1138,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Remove User's Saved Shows
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the shows. Maximum: 50 IDs.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
   @Delete(path: '/me/shows')
   Future<chopper.Response> _meShowsDelete({
@@ -1157,38 +1149,36 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Check User's Saved Shows
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the shows. Maximum: 50 IDs.
   Future<chopper.Response<ArrayOfBooleans>> meShowsContainsGet(
       {required String? ids}) {
-    //generatedMapping.putIfAbsent(ArrayOfBooleans, () => ArrayOfBooleans.fromJsonFactory);
-
     return _meShowsContainsGet(ids: ids);
   }
 
   ///Check User's Saved Shows
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the shows. Maximum: 50 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the shows. Maximum: 50 IDs.
   @Get(path: '/me/shows/contains')
   Future<chopper.Response<ArrayOfBooleans>> _meShowsContainsGet(
       {@Query('ids') required String? ids});
 
   ///Get User's Profile
   ///
-  ///@param user_id The user's [Spotify user ID](/documentation/web-api/#spotify-uris-and-ids).
+  ///@param user_id The user's [Spotify user ID](/documentation/web-api/concepts/spotify-uris-ids).
   Future<chopper.Response<Object>> usersUserIdGet({required String? userId}) {
     return _usersUserIdGet(userId: userId);
   }
 
   ///Get User's Profile
   ///
-  ///@param user_id The user's [Spotify user ID](/documentation/web-api/#spotify-uris-and-ids).
+  ///@param user_id The user's [Spotify user ID](/documentation/web-api/concepts/spotify-uris-ids).
   @Get(path: '/users/{user_id}')
   Future<chopper.Response<Object>> _usersUserIdGet(
       {@Path('user_id') required String? userId});
 
   ///Get User's Playlists
   ///
-  ///@param user_id The user's [Spotify user ID](/documentation/web-api/#spotify-uris-and-ids).
+  ///@param user_id The user's [Spotify user ID](/documentation/web-api/concepts/spotify-uris-ids).
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
   ///@param offset The index of the first playlist to return. Default: 0 (the first object). Maximum offset: 100.000\. Use with `limit` to get the next set of playlists.
   Future<chopper.Response<Object>> usersUserIdPlaylistsGet({
@@ -1202,7 +1192,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get User's Playlists
   ///
-  ///@param user_id The user's [Spotify user ID](/documentation/web-api/#spotify-uris-and-ids).
+  ///@param user_id The user's [Spotify user ID](/documentation/web-api/concepts/spotify-uris-ids).
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
   ///@param offset The index of the first playlist to return. Default: 0 (the first object). Maximum offset: 100.000\. Use with `limit` to get the next set of playlists.
   @Get(path: '/users/{user_id}/playlists')
@@ -1214,7 +1204,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Create Playlist
   ///
-  ///@param user_id The user's [Spotify user ID](/documentation/web-api/#spotify-uris-and-ids).
+  ///@param user_id The user's [Spotify user ID](/documentation/web-api/concepts/spotify-uris-ids).
   Future<chopper.Response<Object>> usersUserIdPlaylistsPost({
     required String? userId,
     required UsersUserIdPlaylistsPost$RequestBody? body,
@@ -1224,7 +1214,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Create Playlist
   ///
-  ///@param user_id The user's [Spotify user ID](/documentation/web-api/#spotify-uris-and-ids).
+  ///@param user_id The user's [Spotify user ID](/documentation/web-api/concepts/spotify-uris-ids).
   @Post(
     path: '/users/{user_id}/playlists',
     optionalBody: true,
@@ -1236,7 +1226,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Follow Playlist
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   Future<chopper.Response> playlistsPlaylistIdFollowersPut({
     required String? playlistId,
     required PlaylistsPlaylistIdFollowersPut$RequestBody? body,
@@ -1246,7 +1236,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Follow Playlist
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   @Put(
     path: '/playlists/{playlist_id}/followers',
     optionalBody: true,
@@ -1258,7 +1248,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Unfollow Playlist
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   Future<chopper.Response> playlistsPlaylistIdFollowersDelete(
       {required String? playlistId}) {
     return _playlistsPlaylistIdFollowersDelete(playlistId: playlistId);
@@ -1266,7 +1256,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Unfollow Playlist
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   @Delete(path: '/playlists/{playlist_id}/followers')
   Future<chopper.Response> _playlistsPlaylistIdFollowersDelete(
       {@Path('playlist_id') required String? playlistId});
@@ -1344,7 +1334,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Single Browse Category
   ///
-  ///@param category_id The [Spotify category ID](/documentation/web-api/#spotify-uris-and-ids) for the category.
+  ///@param category_id The [Spotify category ID](/documentation/web-api/concepts/spotify-uris-ids) for the category.
   ///@param country A country: an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Provide this parameter to ensure that the category exists for a particular country.
   ///@param locale The desired language, consisting of an [ISO 639-1](http://en.wikipedia.org/wiki/ISO_639-1) language code and an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), joined by an underscore. For example: `es_MX`, meaning &quot;Spanish (Mexico)&quot;. Provide this parameter if you want the category strings returned in a particular language.<br/> _**Note**: if `locale` is not supplied, or if the specified language is not available, the category strings returned will be in the Spotify default language (American English)._
   Future<chopper.Response<Object>> browseCategoriesCategoryIdGet({
@@ -1358,7 +1348,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Single Browse Category
   ///
-  ///@param category_id The [Spotify category ID](/documentation/web-api/#spotify-uris-and-ids) for the category.
+  ///@param category_id The [Spotify category ID](/documentation/web-api/concepts/spotify-uris-ids) for the category.
   ///@param country A country: an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Provide this parameter to ensure that the category exists for a particular country.
   ///@param locale The desired language, consisting of an [ISO 639-1](http://en.wikipedia.org/wiki/ISO_639-1) language code and an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2), joined by an underscore. For example: `es_MX`, meaning &quot;Spanish (Mexico)&quot;. Provide this parameter if you want the category strings returned in a particular language.<br/> _**Note**: if `locale` is not supplied, or if the specified language is not available, the category strings returned will be in the Spotify default language (American English)._
   @Get(path: '/browse/categories/{category_id}')
@@ -1370,7 +1360,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Category's Playlists
   ///
-  ///@param category_id The [Spotify category ID](/documentation/web-api/#spotify-uris-and-ids) for the category.
+  ///@param category_id The [Spotify category ID](/documentation/web-api/concepts/spotify-uris-ids) for the category.
   ///@param country A country: an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Provide this parameter to ensure that the category exists for a particular country.
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
   ///@param offset The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
@@ -1386,7 +1376,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Category's Playlists
   ///
-  ///@param category_id The [Spotify category ID](/documentation/web-api/#spotify-uris-and-ids) for the category.
+  ///@param category_id The [Spotify category ID](/documentation/web-api/concepts/spotify-uris-ids) for the category.
   ///@param country A country: an [ISO 3166-1 alpha-2 country code](http://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). Provide this parameter to ensure that the category exists for a particular country.
   ///@param limit The maximum number of items to return. Default: 20. Minimum: 1. Maximum: 50.
   ///@param offset The index of the first item to return. Default: 0 (the first item). Use with limit to get the next set of items.
@@ -1400,24 +1390,25 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Playlist Cover Image
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   Future<chopper.Response<ArrayOfImages>> playlistsPlaylistIdImagesGet(
       {required String? playlistId}) {
-    //generatedMapping.putIfAbsent(ArrayOfImages, () => ArrayOfImages.fromJsonFactory);
+    generatedMapping.putIfAbsent(
+        ImageObject, () => ImageObject.fromJsonFactory);
 
     return _playlistsPlaylistIdImagesGet(playlistId: playlistId);
   }
 
   ///Get Playlist Cover Image
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   @Get(path: '/playlists/{playlist_id}/images')
   Future<chopper.Response<ArrayOfImages>> _playlistsPlaylistIdImagesGet(
       {@Path('playlist_id') required String? playlistId});
 
   ///Add Custom Playlist Cover Image
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   Future<chopper.Response> playlistsPlaylistIdImagesPut({
     required String? playlistId,
     required String? body,
@@ -1427,7 +1418,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Add Custom Playlist Cover Image
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
   @Put(
     path: '/playlists/{playlist_id}/images',
     optionalBody: true,
@@ -1498,7 +1489,7 @@ abstract class SpotifyWeb extends ChopperService {
   ///Follow Artists or Users
   ///
   ///@param type The ID type.
-  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). A maximum of 50 IDs can be sent in one request.
+  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). A maximum of 50 IDs can be sent in one request.
   Future<chopper.Response> meFollowingPut({
     required enums.MeFollowingPutType? type,
     required String? ids,
@@ -1510,7 +1501,7 @@ abstract class SpotifyWeb extends ChopperService {
   ///Follow Artists or Users
   ///
   ///@param type The ID type.
-  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). A maximum of 50 IDs can be sent in one request.
+  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). A maximum of 50 IDs can be sent in one request.
   @Put(
     path: '/me/following',
     optionalBody: true,
@@ -1524,7 +1515,7 @@ abstract class SpotifyWeb extends ChopperService {
   ///Unfollow Artists or Users
   ///
   ///@param type The ID type: either `artist` or `user`.
-  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q`. A maximum of 50 IDs can be sent in one request.
+  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q`. A maximum of 50 IDs can be sent in one request.
   Future<chopper.Response> meFollowingDelete({
     required enums.MeFollowingDeleteType? type,
     required String? ids,
@@ -1537,7 +1528,7 @@ abstract class SpotifyWeb extends ChopperService {
   ///Unfollow Artists or Users
   ///
   ///@param type The ID type: either `artist` or `user`.
-  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids). For example: `ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q`. A maximum of 50 IDs can be sent in one request.
+  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids). For example: `ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q`. A maximum of 50 IDs can be sent in one request.
   @Delete(path: '/me/following')
   Future<chopper.Response> _meFollowingDelete({
     @Query('type') required String? type,
@@ -1548,20 +1539,18 @@ abstract class SpotifyWeb extends ChopperService {
   ///Check If User Follows Artists or Users
   ///
   ///@param type The ID type: either `artist` or `user`.
-  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) to check. For example: `ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q`. A maximum of 50 IDs can be sent in one request.
+  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) to check. For example: `ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q`. A maximum of 50 IDs can be sent in one request.
   Future<chopper.Response<ArrayOfBooleans>> meFollowingContainsGet({
     required enums.MeFollowingContainsGetType? type,
     required String? ids,
   }) {
-    //generatedMapping.putIfAbsent(ArrayOfBooleans, () => ArrayOfBooleans.fromJsonFactory);
-
     return _meFollowingContainsGet(type: type?.value?.toString(), ids: ids);
   }
 
   ///Check If User Follows Artists or Users
   ///
   ///@param type The ID type: either `artist` or `user`.
-  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) to check. For example: `ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q`. A maximum of 50 IDs can be sent in one request.
+  ///@param ids A comma-separated list of the artist or the user [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) to check. For example: `ids=74ASZWbe4lXaubB36ztrGX,08td7MxkoHQkXnWAYD8d6Q`. A maximum of 50 IDs can be sent in one request.
   @Get(path: '/me/following/contains')
   Future<chopper.Response<ArrayOfBooleans>> _meFollowingContainsGet({
     @Query('type') required String? type,
@@ -1570,23 +1559,21 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Check if Users Follow Playlist
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
-  ///@param ids A comma-separated list of [Spotify User IDs](/documentation/web-api/#spotify-uris-and-ids) ; the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
+  ///@param ids A comma-separated list of [Spotify User IDs](/documentation/web-api/concepts/spotify-uris-ids) ; the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.
   Future<chopper.Response<ArrayOfBooleans>>
       playlistsPlaylistIdFollowersContainsGet({
     required String? playlistId,
     required String? ids,
   }) {
-    //generatedMapping.putIfAbsent(ArrayOfBooleans, () => ArrayOfBooleans.fromJsonFactory);
-
     return _playlistsPlaylistIdFollowersContainsGet(
         playlistId: playlistId, ids: ids);
   }
 
   ///Check if Users Follow Playlist
   ///
-  ///@param playlist_id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) of the playlist.
-  ///@param ids A comma-separated list of [Spotify User IDs](/documentation/web-api/#spotify-uris-and-ids) ; the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.
+  ///@param playlist_id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) of the playlist.
+  ///@param ids A comma-separated list of [Spotify User IDs](/documentation/web-api/concepts/spotify-uris-ids) ; the ids of the users that you want to check to see if they follow the playlist. Maximum: 5 ids.
   @Get(path: '/playlists/{playlist_id}/followers/contains')
   Future<chopper.Response<ArrayOfBooleans>>
       _playlistsPlaylistIdFollowersContainsGet({
@@ -1596,7 +1583,7 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Tracks' Audio Features
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the tracks. Maximum: 100 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the tracks. Maximum: 100 IDs.
   Future<chopper.Response<ManyAudioFeatures>> audioFeaturesGet(
       {required String? ids}) {
     generatedMapping.putIfAbsent(
@@ -1607,35 +1594,35 @@ abstract class SpotifyWeb extends ChopperService {
 
   ///Get Tracks' Audio Features
   ///
-  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for the tracks. Maximum: 100 IDs.
+  ///@param ids A comma-separated list of the [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for the tracks. Maximum: 100 IDs.
   @Get(path: '/audio-features')
   Future<chopper.Response<ManyAudioFeatures>> _audioFeaturesGet(
       {@Query('ids') required String? ids});
 
   ///Get Track's Audio Features
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the track.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the track.
   Future<chopper.Response<Object>> audioFeaturesIdGet({required String? id}) {
     return _audioFeaturesIdGet(id: id);
   }
 
   ///Get Track's Audio Features
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the track.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the track.
   @Get(path: '/audio-features/{id}')
   Future<chopper.Response<Object>> _audioFeaturesIdGet(
       {@Path('id') required String? id});
 
   ///Get Track's Audio Analysis
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the track.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the track.
   Future<chopper.Response<Object>> audioAnalysisIdGet({required String? id}) {
     return _audioAnalysisIdGet(id: id);
   }
 
   ///Get Track's Audio Analysis
   ///
-  ///@param id The [Spotify ID](/documentation/web-api/#spotify-uris-and-ids) for the track.
+  ///@param id The [Spotify ID](/documentation/web-api/concepts/spotify-uris-ids) for the track.
   @Get(path: '/audio-analysis/{id}')
   Future<chopper.Response<Object>> _audioAnalysisIdGet(
       {@Path('id') required String? id});
@@ -1644,9 +1631,9 @@ abstract class SpotifyWeb extends ChopperService {
   ///
   ///@param limit The target size of the list of recommended tracks. For seeds with unusually small pools or when highly restrictive filtering is applied, it may be impossible to generate the requested number of recommended tracks. Debugging information for such cases is available in the response. Default: 20\. Minimum: 1\. Maximum: 100.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
-  ///@param seed_artists A comma separated list of [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for seed artists.  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
+  ///@param seed_artists A comma separated list of [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for seed artists.  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
   ///@param seed_genres A comma separated list of any genres in the set of [available genre seeds](#available-genre-seeds).  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
-  ///@param seed_tracks A comma separated list of [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for a seed track.  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
+  ///@param seed_tracks A comma separated list of [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for a seed track.  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
   ///@param min_acousticness For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
   ///@param max_acousticness For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
   ///@param target_acousticness For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
@@ -1792,9 +1779,9 @@ abstract class SpotifyWeb extends ChopperService {
   ///
   ///@param limit The target size of the list of recommended tracks. For seeds with unusually small pools or when highly restrictive filtering is applied, it may be impossible to generate the requested number of recommended tracks. Debugging information for such cases is available in the response. Default: 20\. Minimum: 1\. Maximum: 100.
   ///@param market An [ISO 3166-1 alpha-2 country code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).   If a country code is specified, only content that is available in that market will be returned.<br/>   If a valid user access token is specified in the request header, the country associated with   the user account will take priority over this parameter.<br/>   _**Note**: If neither market or user country are provided, the content is considered unavailable for the client._<br/>   Users can view the country that is associated with their account in the [account settings](https://www.spotify.com/se/account/overview/).
-  ///@param seed_artists A comma separated list of [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for seed artists.  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
+  ///@param seed_artists A comma separated list of [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for seed artists.  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
   ///@param seed_genres A comma separated list of any genres in the set of [available genre seeds](#available-genre-seeds).  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
-  ///@param seed_tracks A comma separated list of [Spotify IDs](/documentation/web-api/#spotify-uris-and-ids) for a seed track.  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
+  ///@param seed_tracks A comma separated list of [Spotify IDs](/documentation/web-api/concepts/spotify-uris-ids) for a seed track.  Up to 5 seed values may be provided in any combination of `seed_artists`, `seed_tracks` and `seed_genres`.
   ///@param min_acousticness For each tunable track attribute, a hard floor on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `min_tempo=140` would restrict results to only those tracks with a tempo of greater than 140 beats per minute.
   ///@param max_acousticness For each tunable track attribute, a hard ceiling on the selected track attribute’s value can be provided. See tunable track attributes below for the list of available options. For example, `max_instrumentalness=0.35` would filter out most tracks that are likely to be instrumental.
   ///@param target_acousticness For each of the tunable track attributes (below) a target value may be provided. Tracks with the attribute values nearest to the target values will be preferred. For example, you might request `target_energy=0.6` and `target_danceability=0.8`. All target values will be weighed equally in ranking results.
@@ -2278,6 +2265,9 @@ class LinkedTrackObject {
   factory LinkedTrackObject.fromJson(Map<String, dynamic> json) =>
       _$LinkedTrackObjectFromJson(json);
 
+  static const toJsonFactory = _$LinkedTrackObjectToJson;
+  Map<String, dynamic> toJson() => _$LinkedTrackObjectToJson(this);
+
   @JsonKey(name: 'external_urls')
   final ExternalUrlObject? externalUrls;
   @JsonKey(name: 'href')
@@ -2289,8 +2279,6 @@ class LinkedTrackObject {
   @JsonKey(name: 'uri')
   final String? uri;
   static const fromJsonFactory = _$LinkedTrackObjectFromJson;
-  static const toJsonFactory = _$LinkedTrackObjectToJson;
-  Map<String, dynamic> toJson() => _$LinkedTrackObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -2362,11 +2350,12 @@ class TrackRestrictionObject {
   factory TrackRestrictionObject.fromJson(Map<String, dynamic> json) =>
       _$TrackRestrictionObjectFromJson(json);
 
+  static const toJsonFactory = _$TrackRestrictionObjectToJson;
+  Map<String, dynamic> toJson() => _$TrackRestrictionObjectToJson(this);
+
   @JsonKey(name: 'reason')
   final String? reason;
   static const fromJsonFactory = _$TrackRestrictionObjectFromJson;
-  static const toJsonFactory = _$TrackRestrictionObjectToJson;
-  Map<String, dynamic> toJson() => _$TrackRestrictionObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -2404,6 +2393,9 @@ class AlbumRestrictionObject {
   factory AlbumRestrictionObject.fromJson(Map<String, dynamic> json) =>
       _$AlbumRestrictionObjectFromJson(json);
 
+  static const toJsonFactory = _$AlbumRestrictionObjectToJson;
+  Map<String, dynamic> toJson() => _$AlbumRestrictionObjectToJson(this);
+
   @JsonKey(
     name: 'reason',
     toJson: albumRestrictionObjectReasonToJson,
@@ -2411,8 +2403,6 @@ class AlbumRestrictionObject {
   )
   final enums.AlbumRestrictionObjectReason? reason;
   static const fromJsonFactory = _$AlbumRestrictionObjectFromJson;
-  static const toJsonFactory = _$AlbumRestrictionObjectToJson;
-  Map<String, dynamic> toJson() => _$AlbumRestrictionObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -2452,11 +2442,12 @@ class EpisodeRestrictionObject {
   factory EpisodeRestrictionObject.fromJson(Map<String, dynamic> json) =>
       _$EpisodeRestrictionObjectFromJson(json);
 
+  static const toJsonFactory = _$EpisodeRestrictionObjectToJson;
+  Map<String, dynamic> toJson() => _$EpisodeRestrictionObjectToJson(this);
+
   @JsonKey(name: 'reason')
   final String? reason;
   static const fromJsonFactory = _$EpisodeRestrictionObjectFromJson;
-  static const toJsonFactory = _$EpisodeRestrictionObjectToJson;
-  Map<String, dynamic> toJson() => _$EpisodeRestrictionObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -2494,11 +2485,12 @@ class ChapterRestrictionObject {
   factory ChapterRestrictionObject.fromJson(Map<String, dynamic> json) =>
       _$ChapterRestrictionObjectFromJson(json);
 
+  static const toJsonFactory = _$ChapterRestrictionObjectToJson;
+  Map<String, dynamic> toJson() => _$ChapterRestrictionObjectToJson(this);
+
   @JsonKey(name: 'reason')
   final String? reason;
   static const fromJsonFactory = _$ChapterRestrictionObjectFromJson;
-  static const toJsonFactory = _$ChapterRestrictionObjectToJson;
-  Map<String, dynamic> toJson() => _$ChapterRestrictionObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -2545,6 +2537,9 @@ class ArtistObject {
   factory ArtistObject.fromJson(Map<String, dynamic> json) =>
       _$ArtistObjectFromJson(json);
 
+  static const toJsonFactory = _$ArtistObjectToJson;
+  Map<String, dynamic> toJson() => _$ArtistObjectToJson(this);
+
   @JsonKey(name: 'external_urls')
   final ExternalUrlObject? externalUrls;
   @JsonKey(name: 'followers')
@@ -2570,8 +2565,6 @@ class ArtistObject {
   @JsonKey(name: 'uri')
   final String? uri;
   static const fromJsonFactory = _$ArtistObjectFromJson;
-  static const toJsonFactory = _$ArtistObjectToJson;
-  Map<String, dynamic> toJson() => _$ArtistObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -2685,6 +2678,9 @@ class SimplifiedArtistObject {
   factory SimplifiedArtistObject.fromJson(Map<String, dynamic> json) =>
       _$SimplifiedArtistObjectFromJson(json);
 
+  static const toJsonFactory = _$SimplifiedArtistObjectToJson;
+  Map<String, dynamic> toJson() => _$SimplifiedArtistObjectToJson(this);
+
   @JsonKey(name: 'external_urls')
   final ExternalUrlObject? externalUrls;
   @JsonKey(name: 'href')
@@ -2702,8 +2698,6 @@ class SimplifiedArtistObject {
   @JsonKey(name: 'uri')
   final String? uri;
   static const fromJsonFactory = _$SimplifiedArtistObjectFromJson;
-  static const toJsonFactory = _$SimplifiedArtistObjectToJson;
-  Map<String, dynamic> toJson() => _$SimplifiedArtistObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -2784,6 +2778,9 @@ class PlayHistoryObject {
   factory PlayHistoryObject.fromJson(Map<String, dynamic> json) =>
       _$PlayHistoryObjectFromJson(json);
 
+  static const toJsonFactory = _$PlayHistoryObjectToJson;
+  Map<String, dynamic> toJson() => _$PlayHistoryObjectToJson(this);
+
   @JsonKey(name: 'track')
   final TrackObject? track;
   @JsonKey(name: 'played_at')
@@ -2791,8 +2788,6 @@ class PlayHistoryObject {
   @JsonKey(name: 'context')
   final ContextObject? context;
   static const fromJsonFactory = _$PlayHistoryObjectFromJson;
-  static const toJsonFactory = _$PlayHistoryObjectToJson;
-  Map<String, dynamic> toJson() => _$PlayHistoryObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -2850,6 +2845,9 @@ class PlaylistTrackObject {
   factory PlaylistTrackObject.fromJson(Map<String, dynamic> json) =>
       _$PlaylistTrackObjectFromJson(json);
 
+  static const toJsonFactory = _$PlaylistTrackObjectToJson;
+  Map<String, dynamic> toJson() => _$PlaylistTrackObjectToJson(this);
+
   @JsonKey(name: 'added_at')
   final DateTime? addedAt;
   @JsonKey(name: 'added_by')
@@ -2859,8 +2857,6 @@ class PlaylistTrackObject {
   @JsonKey(name: 'track')
   final dynamic track;
   static const fromJsonFactory = _$PlaylistTrackObjectFromJson;
-  static const toJsonFactory = _$PlaylistTrackObjectToJson;
-  Map<String, dynamic> toJson() => _$PlaylistTrackObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -2931,6 +2927,9 @@ class CurrentlyPlayingObject {
   factory CurrentlyPlayingObject.fromJson(Map<String, dynamic> json) =>
       _$CurrentlyPlayingObjectFromJson(json);
 
+  static const toJsonFactory = _$CurrentlyPlayingObjectToJson;
+  Map<String, dynamic> toJson() => _$CurrentlyPlayingObjectToJson(this);
+
   @JsonKey(name: 'context')
   final ContextObject? context;
   @JsonKey(name: 'timestamp')
@@ -2944,8 +2943,6 @@ class CurrentlyPlayingObject {
   @JsonKey(name: 'currently_playing_type')
   final String? currentlyPlayingType;
   static const fromJsonFactory = _$CurrentlyPlayingObjectFromJson;
-  static const toJsonFactory = _$CurrentlyPlayingObjectToJson;
-  Map<String, dynamic> toJson() => _$CurrentlyPlayingObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -3031,13 +3028,14 @@ class QueueObject {
   factory QueueObject.fromJson(Map<String, dynamic> json) =>
       _$QueueObjectFromJson(json);
 
+  static const toJsonFactory = _$QueueObjectToJson;
+  Map<String, dynamic> toJson() => _$QueueObjectToJson(this);
+
   @JsonKey(name: 'currentlyPlaying')
   final dynamic currentlyPlaying;
   @JsonKey(name: 'queue', defaultValue: <Object>[])
   final List<Object>? queue;
   static const fromJsonFactory = _$QueueObjectFromJson;
-  static const toJsonFactory = _$QueueObjectToJson;
-  Map<String, dynamic> toJson() => _$QueueObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -3095,6 +3093,9 @@ class CurrentlyPlayingContextObject {
   factory CurrentlyPlayingContextObject.fromJson(Map<String, dynamic> json) =>
       _$CurrentlyPlayingContextObjectFromJson(json);
 
+  static const toJsonFactory = _$CurrentlyPlayingContextObjectToJson;
+  Map<String, dynamic> toJson() => _$CurrentlyPlayingContextObjectToJson(this);
+
   @JsonKey(name: 'device')
   final DeviceObject? device;
   @JsonKey(name: 'repeat_state')
@@ -3116,8 +3117,6 @@ class CurrentlyPlayingContextObject {
   @JsonKey(name: 'actions')
   final DisallowsObject? actions;
   static const fromJsonFactory = _$CurrentlyPlayingContextObjectFromJson;
-  static const toJsonFactory = _$CurrentlyPlayingContextObjectToJson;
-  Map<String, dynamic> toJson() => _$CurrentlyPlayingContextObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -3243,6 +3242,9 @@ class DisallowsObject {
   factory DisallowsObject.fromJson(Map<String, dynamic> json) =>
       _$DisallowsObjectFromJson(json);
 
+  static const toJsonFactory = _$DisallowsObjectToJson;
+  Map<String, dynamic> toJson() => _$DisallowsObjectToJson(this);
+
   @JsonKey(name: 'interrupting_playback')
   final bool? interruptingPlayback;
   @JsonKey(name: 'pausing')
@@ -3264,8 +3266,6 @@ class DisallowsObject {
   @JsonKey(name: 'transferring_playback')
   final bool? transferringPlayback;
   static const fromJsonFactory = _$DisallowsObjectFromJson;
-  static const toJsonFactory = _$DisallowsObjectToJson;
-  Map<String, dynamic> toJson() => _$DisallowsObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -3395,13 +3395,14 @@ class ErrorObject {
   factory ErrorObject.fromJson(Map<String, dynamic> json) =>
       _$ErrorObjectFromJson(json);
 
+  static const toJsonFactory = _$ErrorObjectToJson;
+  Map<String, dynamic> toJson() => _$ErrorObjectToJson(this);
+
   @JsonKey(name: 'status')
   final int status;
   @JsonKey(name: 'message')
   final String message;
   static const fromJsonFactory = _$ErrorObjectFromJson;
-  static const toJsonFactory = _$ErrorObjectToJson;
-  Map<String, dynamic> toJson() => _$ErrorObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -3448,6 +3449,9 @@ class PlayerErrorObject {
   factory PlayerErrorObject.fromJson(Map<String, dynamic> json) =>
       _$PlayerErrorObjectFromJson(json);
 
+  static const toJsonFactory = _$PlayerErrorObjectToJson;
+  Map<String, dynamic> toJson() => _$PlayerErrorObjectToJson(this);
+
   @JsonKey(name: 'status')
   final int? status;
   @JsonKey(name: 'message')
@@ -3459,8 +3463,6 @@ class PlayerErrorObject {
   )
   final enums.PlayerErrorReasons? reason;
   static const fromJsonFactory = _$PlayerErrorObjectFromJson;
-  static const toJsonFactory = _$PlayerErrorObjectToJson;
-  Map<String, dynamic> toJson() => _$PlayerErrorObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -3526,6 +3528,9 @@ class PrivateUserObject {
   factory PrivateUserObject.fromJson(Map<String, dynamic> json) =>
       _$PrivateUserObjectFromJson(json);
 
+  static const toJsonFactory = _$PrivateUserObjectToJson;
+  Map<String, dynamic> toJson() => _$PrivateUserObjectToJson(this);
+
   @JsonKey(name: 'country')
   final String? country;
   @JsonKey(name: 'display_name')
@@ -3551,8 +3556,6 @@ class PrivateUserObject {
   @JsonKey(name: 'uri')
   final String? uri;
   static const fromJsonFactory = _$PrivateUserObjectFromJson;
-  static const toJsonFactory = _$PrivateUserObjectToJson;
-  Map<String, dynamic> toJson() => _$PrivateUserObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -3688,6 +3691,9 @@ class PublicUserObject {
   factory PublicUserObject.fromJson(Map<String, dynamic> json) =>
       _$PublicUserObjectFromJson(json);
 
+  static const toJsonFactory = _$PublicUserObjectToJson;
+  Map<String, dynamic> toJson() => _$PublicUserObjectToJson(this);
+
   @JsonKey(name: 'display_name')
   final String? displayName;
   @JsonKey(name: 'external_urls')
@@ -3709,8 +3715,6 @@ class PublicUserObject {
   @JsonKey(name: 'uri')
   final String? uri;
   static const fromJsonFactory = _$PublicUserObjectFromJson;
-  static const toJsonFactory = _$PublicUserObjectToJson;
-  Map<String, dynamic> toJson() => _$PublicUserObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -3812,6 +3816,9 @@ class AudioAnalysisObject {
   factory AudioAnalysisObject.fromJson(Map<String, dynamic> json) =>
       _$AudioAnalysisObjectFromJson(json);
 
+  static const toJsonFactory = _$AudioAnalysisObjectToJson;
+  Map<String, dynamic> toJson() => _$AudioAnalysisObjectToJson(this);
+
   @JsonKey(name: 'meta')
   final AudioAnalysisObject$Meta? meta;
   @JsonKey(name: 'track')
@@ -3827,8 +3834,6 @@ class AudioAnalysisObject {
   @JsonKey(name: 'tatums', defaultValue: <TimeIntervalObject>[])
   final List<TimeIntervalObject>? tatums;
   static const fromJsonFactory = _$AudioAnalysisObjectFromJson;
-  static const toJsonFactory = _$AudioAnalysisObjectToJson;
-  Map<String, dynamic> toJson() => _$AudioAnalysisObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -3916,6 +3921,9 @@ class TimeIntervalObject {
   factory TimeIntervalObject.fromJson(Map<String, dynamic> json) =>
       _$TimeIntervalObjectFromJson(json);
 
+  static const toJsonFactory = _$TimeIntervalObjectToJson;
+  Map<String, dynamic> toJson() => _$TimeIntervalObjectToJson(this);
+
   @JsonKey(name: 'start')
   final double? start;
   @JsonKey(name: 'duration')
@@ -3923,8 +3931,6 @@ class TimeIntervalObject {
   @JsonKey(name: 'confidence')
   final double? confidence;
   static const fromJsonFactory = _$TimeIntervalObjectFromJson;
-  static const toJsonFactory = _$TimeIntervalObjectToJson;
-  Map<String, dynamic> toJson() => _$TimeIntervalObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -3991,6 +3997,9 @@ class SectionObject {
   factory SectionObject.fromJson(Map<String, dynamic> json) =>
       _$SectionObjectFromJson(json);
 
+  static const toJsonFactory = _$SectionObjectToJson;
+  Map<String, dynamic> toJson() => _$SectionObjectToJson(this);
+
   @JsonKey(name: 'start')
   final double? start;
   @JsonKey(name: 'duration')
@@ -4016,8 +4025,6 @@ class SectionObject {
   @JsonKey(name: 'time_signature_confidence')
   final double? timeSignatureConfidence;
   static const fromJsonFactory = _$SectionObjectFromJson;
-  static const toJsonFactory = _$SectionObjectToJson;
-  Map<String, dynamic> toJson() => _$SectionObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -4162,6 +4169,9 @@ class SegmentObject {
   factory SegmentObject.fromJson(Map<String, dynamic> json) =>
       _$SegmentObjectFromJson(json);
 
+  static const toJsonFactory = _$SegmentObjectToJson;
+  Map<String, dynamic> toJson() => _$SegmentObjectToJson(this);
+
   @JsonKey(name: 'start')
   final double? start;
   @JsonKey(name: 'duration')
@@ -4181,8 +4191,6 @@ class SegmentObject {
   @JsonKey(name: 'timbre', defaultValue: <double>[])
   final List<double>? timbre;
   static const fromJsonFactory = _$SegmentObjectFromJson;
-  static const toJsonFactory = _$SegmentObjectToJson;
-  Map<String, dynamic> toJson() => _$SegmentObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -4289,9 +4297,10 @@ class Tempo {
 
   factory Tempo.fromJson(Map<String, dynamic> json) => _$TempoFromJson(json);
 
-  static const fromJsonFactory = _$TempoFromJson;
   static const toJsonFactory = _$TempoToJson;
   Map<String, dynamic> toJson() => _$TempoToJson(this);
+
+  static const fromJsonFactory = _$TempoFromJson;
 
   @override
   String toString() => jsonEncode(this);
@@ -4307,9 +4316,10 @@ class Loudness {
   factory Loudness.fromJson(Map<String, dynamic> json) =>
       _$LoudnessFromJson(json);
 
-  static const fromJsonFactory = _$LoudnessFromJson;
   static const toJsonFactory = _$LoudnessToJson;
   Map<String, dynamic> toJson() => _$LoudnessToJson(this);
+
+  static const fromJsonFactory = _$LoudnessFromJson;
 
   @override
   String toString() => jsonEncode(this);
@@ -4343,6 +4353,9 @@ class AudioFeaturesObject {
 
   factory AudioFeaturesObject.fromJson(Map<String, dynamic> json) =>
       _$AudioFeaturesObjectFromJson(json);
+
+  static const toJsonFactory = _$AudioFeaturesObjectToJson;
+  Map<String, dynamic> toJson() => _$AudioFeaturesObjectToJson(this);
 
   @JsonKey(name: 'acousticness')
   final double? acousticness;
@@ -4385,8 +4398,6 @@ class AudioFeaturesObject {
   @JsonKey(name: 'valence')
   final double? valence;
   static const fromJsonFactory = _$AudioFeaturesObjectFromJson;
-  static const toJsonFactory = _$AudioFeaturesObjectToJson;
-  Map<String, dynamic> toJson() => _$AudioFeaturesObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -4580,6 +4591,9 @@ class SimplifiedTrackObject {
   factory SimplifiedTrackObject.fromJson(Map<String, dynamic> json) =>
       _$SimplifiedTrackObjectFromJson(json);
 
+  static const toJsonFactory = _$SimplifiedTrackObjectToJson;
+  Map<String, dynamic> toJson() => _$SimplifiedTrackObjectToJson(this);
+
   @JsonKey(name: 'artists', defaultValue: <SimplifiedArtistObject>[])
   final List<SimplifiedArtistObject>? artists;
   @JsonKey(name: 'available_markets', defaultValue: <String>[])
@@ -4615,8 +4629,6 @@ class SimplifiedTrackObject {
   @JsonKey(name: 'is_local')
   final bool? isLocal;
   static const fromJsonFactory = _$SimplifiedTrackObjectFromJson;
-  static const toJsonFactory = _$SimplifiedTrackObjectToJson;
-  Map<String, dynamic> toJson() => _$SimplifiedTrackObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -4786,11 +4798,12 @@ class DevicesObject {
   factory DevicesObject.fromJson(Map<String, dynamic> json) =>
       _$DevicesObjectFromJson(json);
 
+  static const toJsonFactory = _$DevicesObjectToJson;
+  Map<String, dynamic> toJson() => _$DevicesObjectToJson(this);
+
   @JsonKey(name: 'devices', defaultValue: <DeviceObject>[])
   final List<DeviceObject>? devices;
   static const fromJsonFactory = _$DevicesObjectFromJson;
-  static const toJsonFactory = _$DevicesObjectToJson;
-  Map<String, dynamic> toJson() => _$DevicesObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -4834,6 +4847,9 @@ class DeviceObject {
   factory DeviceObject.fromJson(Map<String, dynamic> json) =>
       _$DeviceObjectFromJson(json);
 
+  static const toJsonFactory = _$DeviceObjectToJson;
+  Map<String, dynamic> toJson() => _$DeviceObjectToJson(this);
+
   @JsonKey(name: 'id')
   final String? id;
   @JsonKey(name: 'is_active')
@@ -4849,8 +4865,6 @@ class DeviceObject {
   @JsonKey(name: 'volume_percent')
   final int? volumePercent;
   static const fromJsonFactory = _$DeviceObjectFromJson;
-  static const toJsonFactory = _$DeviceObjectToJson;
-  Map<String, dynamic> toJson() => _$DeviceObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -4943,13 +4957,14 @@ class CursorObject {
   factory CursorObject.fromJson(Map<String, dynamic> json) =>
       _$CursorObjectFromJson(json);
 
+  static const toJsonFactory = _$CursorObjectToJson;
+  Map<String, dynamic> toJson() => _$CursorObjectToJson(this);
+
   @JsonKey(name: 'after')
   final String? after;
   @JsonKey(name: 'before')
   final String? before;
   static const fromJsonFactory = _$CursorObjectFromJson;
-  static const toJsonFactory = _$CursorObjectToJson;
-  Map<String, dynamic> toJson() => _$CursorObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -4998,6 +5013,9 @@ class CursorPagingObject {
   factory CursorPagingObject.fromJson(Map<String, dynamic> json) =>
       _$CursorPagingObjectFromJson(json);
 
+  static const toJsonFactory = _$CursorPagingObjectToJson;
+  Map<String, dynamic> toJson() => _$CursorPagingObjectToJson(this);
+
   @JsonKey(name: 'href')
   final String? href;
   @JsonKey(name: 'limit')
@@ -5009,8 +5027,6 @@ class CursorPagingObject {
   @JsonKey(name: 'total')
   final int? total;
   static const fromJsonFactory = _$CursorPagingObjectFromJson;
-  static const toJsonFactory = _$CursorPagingObjectToJson;
-  Map<String, dynamic> toJson() => _$CursorPagingObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5086,6 +5102,9 @@ class CursorPagingPlayHistoryObject {
   factory CursorPagingPlayHistoryObject.fromJson(Map<String, dynamic> json) =>
       _$CursorPagingPlayHistoryObjectFromJson(json);
 
+  static const toJsonFactory = _$CursorPagingPlayHistoryObjectToJson;
+  Map<String, dynamic> toJson() => _$CursorPagingPlayHistoryObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <PlayHistoryObject>[])
   final List<PlayHistoryObject>? items;
   @JsonKey(name: 'href')
@@ -5099,8 +5118,6 @@ class CursorPagingPlayHistoryObject {
   @JsonKey(name: 'total')
   final int? total;
   static const fromJsonFactory = _$CursorPagingPlayHistoryObjectFromJson;
-  static const toJsonFactory = _$CursorPagingPlayHistoryObjectToJson;
-  Map<String, dynamic> toJson() => _$CursorPagingPlayHistoryObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5185,6 +5202,10 @@ class CursorPagingSimplifiedArtistObject {
           Map<String, dynamic> json) =>
       _$CursorPagingSimplifiedArtistObjectFromJson(json);
 
+  static const toJsonFactory = _$CursorPagingSimplifiedArtistObjectToJson;
+  Map<String, dynamic> toJson() =>
+      _$CursorPagingSimplifiedArtistObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <ArtistObject>[])
   final List<ArtistObject>? items;
   @JsonKey(name: 'href')
@@ -5198,9 +5219,6 @@ class CursorPagingSimplifiedArtistObject {
   @JsonKey(name: 'total')
   final int? total;
   static const fromJsonFactory = _$CursorPagingSimplifiedArtistObjectFromJson;
-  static const toJsonFactory = _$CursorPagingSimplifiedArtistObjectToJson;
-  Map<String, dynamic> toJson() =>
-      _$CursorPagingSimplifiedArtistObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5284,6 +5302,9 @@ class PagingObject {
   factory PagingObject.fromJson(Map<String, dynamic> json) =>
       _$PagingObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingObjectToJson(this);
+
   @JsonKey(name: 'href')
   final String href;
   @JsonKey(name: 'limit')
@@ -5297,8 +5318,6 @@ class PagingObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingObjectFromJson;
-  static const toJsonFactory = _$PagingObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5382,6 +5401,9 @@ class PagingPlaylistObject {
   factory PagingPlaylistObject.fromJson(Map<String, dynamic> json) =>
       _$PagingPlaylistObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingPlaylistObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingPlaylistObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SimplifiedPlaylistObject>[])
   final List<SimplifiedPlaylistObject> items;
   @JsonKey(name: 'href')
@@ -5397,8 +5419,6 @@ class PagingPlaylistObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingPlaylistObjectFromJson;
-  static const toJsonFactory = _$PagingPlaylistObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingPlaylistObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5484,13 +5504,14 @@ class PagingFeaturedPlaylistObject {
   factory PagingFeaturedPlaylistObject.fromJson(Map<String, dynamic> json) =>
       _$PagingFeaturedPlaylistObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingFeaturedPlaylistObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingFeaturedPlaylistObjectToJson(this);
+
   @JsonKey(name: 'message')
   final String? message;
   @JsonKey(name: 'playlists')
   final PagingPlaylistObject? playlists;
   static const fromJsonFactory = _$PagingFeaturedPlaylistObjectFromJson;
-  static const toJsonFactory = _$PagingFeaturedPlaylistObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingFeaturedPlaylistObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5546,6 +5567,9 @@ class PagingSimplifiedAlbumObject {
   factory PagingSimplifiedAlbumObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSimplifiedAlbumObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSimplifiedAlbumObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSimplifiedAlbumObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SimplifiedAlbumObject>[])
   final List<SimplifiedAlbumObject> items;
   @JsonKey(name: 'href')
@@ -5561,8 +5585,6 @@ class PagingSimplifiedAlbumObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSimplifiedAlbumObjectFromJson;
-  static const toJsonFactory = _$PagingSimplifiedAlbumObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingSimplifiedAlbumObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5653,6 +5675,9 @@ class PagingSavedAlbumObject {
   factory PagingSavedAlbumObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSavedAlbumObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSavedAlbumObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSavedAlbumObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SavedAlbumObject>[])
   final List<SavedAlbumObject> items;
   @JsonKey(name: 'href')
@@ -5668,8 +5693,6 @@ class PagingSavedAlbumObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSavedAlbumObjectFromJson;
-  static const toJsonFactory = _$PagingSavedAlbumObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingSavedAlbumObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5760,6 +5783,9 @@ class PagingSimplifiedTrackObject {
   factory PagingSimplifiedTrackObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSimplifiedTrackObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSimplifiedTrackObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSimplifiedTrackObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SimplifiedTrackObject>[])
   final List<SimplifiedTrackObject> items;
   @JsonKey(name: 'href')
@@ -5775,8 +5801,6 @@ class PagingSimplifiedTrackObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSimplifiedTrackObjectFromJson;
-  static const toJsonFactory = _$PagingSimplifiedTrackObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingSimplifiedTrackObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5867,6 +5891,9 @@ class PagingSavedTrackObject {
   factory PagingSavedTrackObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSavedTrackObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSavedTrackObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSavedTrackObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SavedTrackObject>[])
   final List<SavedTrackObject> items;
   @JsonKey(name: 'href')
@@ -5882,8 +5909,6 @@ class PagingSavedTrackObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSavedTrackObjectFromJson;
-  static const toJsonFactory = _$PagingSavedTrackObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingSavedTrackObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -5974,6 +5999,9 @@ class PagingTrackObject {
   factory PagingTrackObject.fromJson(Map<String, dynamic> json) =>
       _$PagingTrackObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingTrackObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingTrackObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <TrackObject>[])
   final List<TrackObject> items;
   @JsonKey(name: 'href')
@@ -5989,8 +6017,6 @@ class PagingTrackObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingTrackObjectFromJson;
-  static const toJsonFactory = _$PagingTrackObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingTrackObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -6081,6 +6107,9 @@ class PagingPlaylistTrackObject {
   factory PagingPlaylistTrackObject.fromJson(Map<String, dynamic> json) =>
       _$PagingPlaylistTrackObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingPlaylistTrackObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingPlaylistTrackObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <PlaylistTrackObject>[])
   final List<PlaylistTrackObject> items;
   @JsonKey(name: 'href')
@@ -6096,8 +6125,6 @@ class PagingPlaylistTrackObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingPlaylistTrackObjectFromJson;
-  static const toJsonFactory = _$PagingPlaylistTrackObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingPlaylistTrackObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -6188,6 +6215,9 @@ class PagingSimplifiedShowObject {
   factory PagingSimplifiedShowObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSimplifiedShowObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSimplifiedShowObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSimplifiedShowObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SimplifiedShowObject>[])
   final List<SimplifiedShowObject> items;
   @JsonKey(name: 'href')
@@ -6203,8 +6233,6 @@ class PagingSimplifiedShowObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSimplifiedShowObjectFromJson;
-  static const toJsonFactory = _$PagingSimplifiedShowObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingSimplifiedShowObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -6295,6 +6323,9 @@ class PagingSavedShowObject {
   factory PagingSavedShowObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSavedShowObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSavedShowObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSavedShowObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SavedShowObject>[])
   final List<SavedShowObject> items;
   @JsonKey(name: 'href')
@@ -6310,8 +6341,6 @@ class PagingSavedShowObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSavedShowObjectFromJson;
-  static const toJsonFactory = _$PagingSavedShowObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingSavedShowObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -6402,6 +6431,9 @@ class PagingSimplifiedEpisodeObject {
   factory PagingSimplifiedEpisodeObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSimplifiedEpisodeObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSimplifiedEpisodeObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSimplifiedEpisodeObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SimplifiedEpisodeObject>[])
   final List<SimplifiedEpisodeObject> items;
   @JsonKey(name: 'href')
@@ -6417,8 +6449,6 @@ class PagingSimplifiedEpisodeObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSimplifiedEpisodeObjectFromJson;
-  static const toJsonFactory = _$PagingSimplifiedEpisodeObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingSimplifiedEpisodeObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -6510,6 +6540,9 @@ class PagingSavedEpisodeObject {
   factory PagingSavedEpisodeObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSavedEpisodeObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSavedEpisodeObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSavedEpisodeObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SavedEpisodeObject>[])
   final List<SavedEpisodeObject> items;
   @JsonKey(name: 'href')
@@ -6525,8 +6558,6 @@ class PagingSavedEpisodeObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSavedEpisodeObjectFromJson;
-  static const toJsonFactory = _$PagingSavedEpisodeObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingSavedEpisodeObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -6617,6 +6648,10 @@ class PagingSimplifiedAudiobookObject {
   factory PagingSimplifiedAudiobookObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSimplifiedAudiobookObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSimplifiedAudiobookObjectToJson;
+  Map<String, dynamic> toJson() =>
+      _$PagingSimplifiedAudiobookObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SimplifiedAudiobookObject>[])
   final List<SimplifiedAudiobookObject> items;
   @JsonKey(name: 'href')
@@ -6632,9 +6667,6 @@ class PagingSimplifiedAudiobookObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSimplifiedAudiobookObjectFromJson;
-  static const toJsonFactory = _$PagingSimplifiedAudiobookObjectToJson;
-  Map<String, dynamic> toJson() =>
-      _$PagingSimplifiedAudiobookObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -6726,6 +6758,9 @@ class PagingSimplifiedArtistObject {
   factory PagingSimplifiedArtistObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSimplifiedArtistObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSimplifiedArtistObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSimplifiedArtistObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SimplifiedArtistObject>[])
   final List<SimplifiedArtistObject> items;
   @JsonKey(name: 'href')
@@ -6741,8 +6776,6 @@ class PagingSimplifiedArtistObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSimplifiedArtistObjectFromJson;
-  static const toJsonFactory = _$PagingSimplifiedArtistObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingSimplifiedArtistObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -6834,6 +6867,9 @@ class PagingArtistObject {
   factory PagingArtistObject.fromJson(Map<String, dynamic> json) =>
       _$PagingArtistObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingArtistObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingArtistObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <ArtistObject>[])
   final List<ArtistObject> items;
   @JsonKey(name: 'href')
@@ -6849,8 +6885,6 @@ class PagingArtistObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingArtistObjectFromJson;
-  static const toJsonFactory = _$PagingArtistObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingArtistObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -6941,6 +6975,9 @@ class PagingSimplifiedChapterObject {
   factory PagingSimplifiedChapterObject.fromJson(Map<String, dynamic> json) =>
       _$PagingSimplifiedChapterObjectFromJson(json);
 
+  static const toJsonFactory = _$PagingSimplifiedChapterObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSimplifiedChapterObjectToJson(this);
+
   @JsonKey(name: 'items', defaultValue: <SimplifiedChapterObject>[])
   final List<SimplifiedChapterObject> items;
   @JsonKey(name: 'href')
@@ -6956,8 +6993,6 @@ class PagingSimplifiedChapterObject {
   @JsonKey(name: 'total')
   final int total;
   static const fromJsonFactory = _$PagingSimplifiedChapterObjectFromJson;
-  static const toJsonFactory = _$PagingSimplifiedChapterObjectToJson;
-  Map<String, dynamic> toJson() => _$PagingSimplifiedChapterObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -7044,13 +7079,14 @@ class RecommendationsObject {
   factory RecommendationsObject.fromJson(Map<String, dynamic> json) =>
       _$RecommendationsObjectFromJson(json);
 
+  static const toJsonFactory = _$RecommendationsObjectToJson;
+  Map<String, dynamic> toJson() => _$RecommendationsObjectToJson(this);
+
   @JsonKey(name: 'seeds', defaultValue: <RecommendationSeedObject>[])
   final List<RecommendationSeedObject> seeds;
   @JsonKey(name: 'tracks', defaultValue: <TrackObject>[])
   final List<TrackObject> tracks;
   static const fromJsonFactory = _$RecommendationsObjectFromJson;
-  static const toJsonFactory = _$RecommendationsObjectToJson;
-  Map<String, dynamic> toJson() => _$RecommendationsObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -7102,6 +7138,9 @@ class RecommendationSeedObject {
   factory RecommendationSeedObject.fromJson(Map<String, dynamic> json) =>
       _$RecommendationSeedObjectFromJson(json);
 
+  static const toJsonFactory = _$RecommendationSeedObjectToJson;
+  Map<String, dynamic> toJson() => _$RecommendationSeedObjectToJson(this);
+
   @JsonKey(name: 'afterFilteringSize')
   final int? afterFilteringSize;
   @JsonKey(name: 'afterRelinkingSize')
@@ -7115,8 +7154,6 @@ class RecommendationSeedObject {
   @JsonKey(name: 'type')
   final String? type;
   static const fromJsonFactory = _$RecommendationSeedObjectFromJson;
-  static const toJsonFactory = _$RecommendationSeedObjectToJson;
-  Map<String, dynamic> toJson() => _$RecommendationSeedObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -7203,13 +7240,14 @@ class SavedAlbumObject {
   factory SavedAlbumObject.fromJson(Map<String, dynamic> json) =>
       _$SavedAlbumObjectFromJson(json);
 
+  static const toJsonFactory = _$SavedAlbumObjectToJson;
+  Map<String, dynamic> toJson() => _$SavedAlbumObjectToJson(this);
+
   @JsonKey(name: 'added_at')
   final DateTime? addedAt;
   @JsonKey(name: 'album')
   final AlbumObject? album;
   static const fromJsonFactory = _$SavedAlbumObjectFromJson;
-  static const toJsonFactory = _$SavedAlbumObjectToJson;
-  Map<String, dynamic> toJson() => _$SavedAlbumObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -7256,13 +7294,14 @@ class SavedTrackObject {
   factory SavedTrackObject.fromJson(Map<String, dynamic> json) =>
       _$SavedTrackObjectFromJson(json);
 
+  static const toJsonFactory = _$SavedTrackObjectToJson;
+  Map<String, dynamic> toJson() => _$SavedTrackObjectToJson(this);
+
   @JsonKey(name: 'added_at')
   final DateTime? addedAt;
   @JsonKey(name: 'track')
   final TrackObject? track;
   static const fromJsonFactory = _$SavedTrackObjectFromJson;
-  static const toJsonFactory = _$SavedTrackObjectToJson;
-  Map<String, dynamic> toJson() => _$SavedTrackObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -7309,13 +7348,14 @@ class SavedEpisodeObject {
   factory SavedEpisodeObject.fromJson(Map<String, dynamic> json) =>
       _$SavedEpisodeObjectFromJson(json);
 
+  static const toJsonFactory = _$SavedEpisodeObjectToJson;
+  Map<String, dynamic> toJson() => _$SavedEpisodeObjectToJson(this);
+
   @JsonKey(name: 'added_at')
   final DateTime? addedAt;
   @JsonKey(name: 'episode')
   final EpisodeObject? episode;
   static const fromJsonFactory = _$SavedEpisodeObjectFromJson;
-  static const toJsonFactory = _$SavedEpisodeObjectToJson;
-  Map<String, dynamic> toJson() => _$SavedEpisodeObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -7362,13 +7402,14 @@ class SavedShowObject {
   factory SavedShowObject.fromJson(Map<String, dynamic> json) =>
       _$SavedShowObjectFromJson(json);
 
+  static const toJsonFactory = _$SavedShowObjectToJson;
+  Map<String, dynamic> toJson() => _$SavedShowObjectToJson(this);
+
   @JsonKey(name: 'added_at')
   final DateTime? addedAt;
   @JsonKey(name: 'show')
   final SimplifiedShowObject? show;
   static const fromJsonFactory = _$SavedShowObjectFromJson;
-  static const toJsonFactory = _$SavedShowObjectToJson;
-  Map<String, dynamic> toJson() => _$SavedShowObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -7427,6 +7468,9 @@ class TuneableTrackObject {
   factory TuneableTrackObject.fromJson(Map<String, dynamic> json) =>
       _$TuneableTrackObjectFromJson(json);
 
+  static const toJsonFactory = _$TuneableTrackObjectToJson;
+  Map<String, dynamic> toJson() => _$TuneableTrackObjectToJson(this);
+
   @JsonKey(name: 'acousticness')
   final double? acousticness;
   @JsonKey(name: 'danceability')
@@ -7456,8 +7500,6 @@ class TuneableTrackObject {
   @JsonKey(name: 'valence')
   final double? valence;
   static const fromJsonFactory = _$TuneableTrackObjectFromJson;
-  static const toJsonFactory = _$TuneableTrackObjectToJson;
-  Map<String, dynamic> toJson() => _$TuneableTrackObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -7618,6 +7660,9 @@ class PlaylistObject {
   factory PlaylistObject.fromJson(Map<String, dynamic> json) =>
       _$PlaylistObjectFromJson(json);
 
+  static const toJsonFactory = _$PlaylistObjectToJson;
+  Map<String, dynamic> toJson() => _$PlaylistObjectToJson(this);
+
   @JsonKey(name: 'collaborative')
   final bool? collaborative;
   @JsonKey(name: 'description')
@@ -7647,8 +7692,6 @@ class PlaylistObject {
   @JsonKey(name: 'uri')
   final String? uri;
   static const fromJsonFactory = _$PlaylistObjectFromJson;
-  static const toJsonFactory = _$PlaylistObjectToJson;
-  Map<String, dynamic> toJson() => _$PlaylistObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -7801,6 +7844,9 @@ class SimplifiedPlaylistObject {
   factory SimplifiedPlaylistObject.fromJson(Map<String, dynamic> json) =>
       _$SimplifiedPlaylistObjectFromJson(json);
 
+  static const toJsonFactory = _$SimplifiedPlaylistObjectToJson;
+  Map<String, dynamic> toJson() => _$SimplifiedPlaylistObjectToJson(this);
+
   @JsonKey(name: 'collaborative')
   final bool? collaborative;
   @JsonKey(name: 'description')
@@ -7828,8 +7874,6 @@ class SimplifiedPlaylistObject {
   @JsonKey(name: 'uri')
   final String? uri;
   static const fromJsonFactory = _$SimplifiedPlaylistObjectFromJson;
-  static const toJsonFactory = _$SimplifiedPlaylistObjectToJson;
-  Map<String, dynamic> toJson() => _$SimplifiedPlaylistObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -7963,13 +8007,14 @@ class PlaylistTracksRefObject {
   factory PlaylistTracksRefObject.fromJson(Map<String, dynamic> json) =>
       _$PlaylistTracksRefObjectFromJson(json);
 
+  static const toJsonFactory = _$PlaylistTracksRefObjectToJson;
+  Map<String, dynamic> toJson() => _$PlaylistTracksRefObjectToJson(this);
+
   @JsonKey(name: 'href')
   final String? href;
   @JsonKey(name: 'total')
   final int? total;
   static const fromJsonFactory = _$PlaylistTracksRefObjectFromJson;
-  static const toJsonFactory = _$PlaylistTracksRefObjectToJson;
-  Map<String, dynamic> toJson() => _$PlaylistTracksRefObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -8019,6 +8064,9 @@ class PlaylistUserObject {
   factory PlaylistUserObject.fromJson(Map<String, dynamic> json) =>
       _$PlaylistUserObjectFromJson(json);
 
+  static const toJsonFactory = _$PlaylistUserObjectToJson;
+  Map<String, dynamic> toJson() => _$PlaylistUserObjectToJson(this);
+
   @JsonKey(name: 'external_urls')
   final ExternalUrlObject? externalUrls;
   @JsonKey(name: 'followers')
@@ -8036,8 +8084,6 @@ class PlaylistUserObject {
   @JsonKey(name: 'uri')
   final String? uri;
   static const fromJsonFactory = _$PlaylistUserObjectFromJson;
-  static const toJsonFactory = _$PlaylistUserObjectToJson;
-  Map<String, dynamic> toJson() => _$PlaylistUserObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -8123,6 +8169,9 @@ class PlaylistOwnerObject {
   factory PlaylistOwnerObject.fromJson(Map<String, dynamic> json) =>
       _$PlaylistOwnerObjectFromJson(json);
 
+  static const toJsonFactory = _$PlaylistOwnerObjectToJson;
+  Map<String, dynamic> toJson() => _$PlaylistOwnerObjectToJson(this);
+
   @JsonKey(name: 'display_name')
   final String? displayName;
   @JsonKey(name: 'external_urls')
@@ -8142,8 +8191,6 @@ class PlaylistOwnerObject {
   @JsonKey(name: 'uri')
   final String? uri;
   static const fromJsonFactory = _$PlaylistOwnerObjectFromJson;
-  static const toJsonFactory = _$PlaylistOwnerObjectToJson;
-  Map<String, dynamic> toJson() => _$PlaylistOwnerObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -8235,6 +8282,9 @@ class CategoryObject {
   factory CategoryObject.fromJson(Map<String, dynamic> json) =>
       _$CategoryObjectFromJson(json);
 
+  static const toJsonFactory = _$CategoryObjectToJson;
+  Map<String, dynamic> toJson() => _$CategoryObjectToJson(this);
+
   @JsonKey(name: 'href')
   final String href;
   @JsonKey(name: 'icons', defaultValue: <ImageObject>[])
@@ -8244,8 +8294,6 @@ class CategoryObject {
   @JsonKey(name: 'name')
   final String name;
   static const fromJsonFactory = _$CategoryObjectFromJson;
-  static const toJsonFactory = _$CategoryObjectToJson;
-  Map<String, dynamic> toJson() => _$CategoryObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -8324,6 +8372,9 @@ class TrackObject {
   factory TrackObject.fromJson(Map<String, dynamic> json) =>
       _$TrackObjectFromJson(json);
 
+  static const toJsonFactory = _$TrackObjectToJson;
+  Map<String, dynamic> toJson() => _$TrackObjectToJson(this);
+
   @JsonKey(name: 'album')
   final SimplifiedAlbumObject? album;
   @JsonKey(name: 'artists', defaultValue: <ArtistObject>[])
@@ -8369,8 +8420,6 @@ class TrackObject {
   @JsonKey(name: 'is_local')
   final bool? isLocal;
   static const fromJsonFactory = _$TrackObjectFromJson;
-  static const toJsonFactory = _$TrackObjectToJson;
-  Map<String, dynamic> toJson() => _$TrackObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -8584,6 +8633,9 @@ class EpisodeObject {
   factory EpisodeObject.fromJson(Map<String, dynamic> json) =>
       _$EpisodeObjectFromJson(json);
 
+  static const toJsonFactory = _$EpisodeObjectToJson;
+  Map<String, dynamic> toJson() => _$EpisodeObjectToJson(this);
+
   @JsonKey(name: 'show')
   final SimplifiedShowObject show;
   @JsonKey(name: 'audio_preview_url')
@@ -8635,8 +8687,6 @@ class EpisodeObject {
   @JsonKey(name: 'restrictions')
   final EpisodeRestrictionObject? restrictions;
   static const fromJsonFactory = _$EpisodeObjectFromJson;
-  static const toJsonFactory = _$EpisodeObjectToJson;
-  Map<String, dynamic> toJson() => _$EpisodeObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -8864,6 +8914,9 @@ class SimplifiedEpisodeObject {
   factory SimplifiedEpisodeObject.fromJson(Map<String, dynamic> json) =>
       _$SimplifiedEpisodeObjectFromJson(json);
 
+  static const toJsonFactory = _$SimplifiedEpisodeObjectToJson;
+  Map<String, dynamic> toJson() => _$SimplifiedEpisodeObjectToJson(this);
+
   @JsonKey(name: 'audio_preview_url')
   final String audioPreviewUrl;
   @JsonKey(name: 'description')
@@ -8913,8 +8966,6 @@ class SimplifiedEpisodeObject {
   @JsonKey(name: 'restrictions')
   final EpisodeRestrictionObject? restrictions;
   static const fromJsonFactory = _$SimplifiedEpisodeObjectFromJson;
-  static const toJsonFactory = _$SimplifiedEpisodeObjectToJson;
-  Map<String, dynamic> toJson() => _$SimplifiedEpisodeObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -9136,6 +9187,9 @@ class EpisodeBase {
   factory EpisodeBase.fromJson(Map<String, dynamic> json) =>
       _$EpisodeBaseFromJson(json);
 
+  static const toJsonFactory = _$EpisodeBaseToJson;
+  Map<String, dynamic> toJson() => _$EpisodeBaseToJson(this);
+
   @JsonKey(name: 'audio_preview_url')
   final String audioPreviewUrl;
   @JsonKey(name: 'description')
@@ -9185,8 +9239,6 @@ class EpisodeBase {
   @JsonKey(name: 'restrictions')
   final EpisodeRestrictionObject? restrictions;
   static const fromJsonFactory = _$EpisodeBaseFromJson;
-  static const toJsonFactory = _$EpisodeBaseToJson;
-  Map<String, dynamic> toJson() => _$EpisodeBaseToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -9389,13 +9441,14 @@ class ResumePointObject {
   factory ResumePointObject.fromJson(Map<String, dynamic> json) =>
       _$ResumePointObjectFromJson(json);
 
+  static const toJsonFactory = _$ResumePointObjectToJson;
+  Map<String, dynamic> toJson() => _$ResumePointObjectToJson(this);
+
   @JsonKey(name: 'fully_played')
   final bool? fullyPlayed;
   @JsonKey(name: 'resume_position_ms')
   final int? resumePositionMs;
   static const fromJsonFactory = _$ResumePointObjectFromJson;
-  static const toJsonFactory = _$ResumePointObjectToJson;
-  Map<String, dynamic> toJson() => _$ResumePointObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -9462,6 +9515,9 @@ class ShowBase {
   factory ShowBase.fromJson(Map<String, dynamic> json) =>
       _$ShowBaseFromJson(json);
 
+  static const toJsonFactory = _$ShowBaseToJson;
+  Map<String, dynamic> toJson() => _$ShowBaseToJson(this);
+
   @JsonKey(name: 'available_markets', defaultValue: <String>[])
   final List<String> availableMarkets;
   @JsonKey(name: 'copyrights', defaultValue: <CopyrightObject>[])
@@ -9501,8 +9557,6 @@ class ShowBase {
   @JsonKey(name: 'total_episodes')
   final int totalEpisodes;
   static const fromJsonFactory = _$ShowBaseFromJson;
-  static const toJsonFactory = _$ShowBaseToJson;
-  Map<String, dynamic> toJson() => _$ShowBaseToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -9693,6 +9747,9 @@ class ShowObject {
   factory ShowObject.fromJson(Map<String, dynamic> json) =>
       _$ShowObjectFromJson(json);
 
+  static const toJsonFactory = _$ShowObjectToJson;
+  Map<String, dynamic> toJson() => _$ShowObjectToJson(this);
+
   @JsonKey(name: 'episodes')
   final Object episodes;
   @JsonKey(name: 'available_markets', defaultValue: <String>[])
@@ -9734,8 +9791,6 @@ class ShowObject {
   @JsonKey(name: 'total_episodes')
   final int totalEpisodes;
   static const fromJsonFactory = _$ShowObjectFromJson;
-  static const toJsonFactory = _$ShowObjectToJson;
-  Map<String, dynamic> toJson() => _$ShowObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -9933,6 +9988,9 @@ class SimplifiedShowObject {
   factory SimplifiedShowObject.fromJson(Map<String, dynamic> json) =>
       _$SimplifiedShowObjectFromJson(json);
 
+  static const toJsonFactory = _$SimplifiedShowObjectToJson;
+  Map<String, dynamic> toJson() => _$SimplifiedShowObjectToJson(this);
+
   @JsonKey(name: 'available_markets', defaultValue: <String>[])
   final List<String> availableMarkets;
   @JsonKey(name: 'copyrights', defaultValue: <CopyrightObject>[])
@@ -9972,8 +10030,6 @@ class SimplifiedShowObject {
   @JsonKey(name: 'total_episodes')
   final int totalEpisodes;
   static const fromJsonFactory = _$SimplifiedShowObjectFromJson;
-  static const toJsonFactory = _$SimplifiedShowObjectToJson;
-  Map<String, dynamic> toJson() => _$SimplifiedShowObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -10165,6 +10221,9 @@ class AudiobookBase {
   factory AudiobookBase.fromJson(Map<String, dynamic> json) =>
       _$AudiobookBaseFromJson(json);
 
+  static const toJsonFactory = _$AudiobookBaseToJson;
+  Map<String, dynamic> toJson() => _$AudiobookBaseToJson(this);
+
   @JsonKey(name: 'authors', defaultValue: <AuthorObject>[])
   final List<AuthorObject> authors;
   @JsonKey(name: 'available_markets', defaultValue: <String>[])
@@ -10208,8 +10267,6 @@ class AudiobookBase {
   @JsonKey(name: 'total_chapters')
   final int totalChapters;
   static const fromJsonFactory = _$AudiobookBaseFromJson;
-  static const toJsonFactory = _$AudiobookBaseToJson;
-  Map<String, dynamic> toJson() => _$AudiobookBaseToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -10416,6 +10473,9 @@ class AudiobookObject {
   factory AudiobookObject.fromJson(Map<String, dynamic> json) =>
       _$AudiobookObjectFromJson(json);
 
+  static const toJsonFactory = _$AudiobookObjectToJson;
+  Map<String, dynamic> toJson() => _$AudiobookObjectToJson(this);
+
   @JsonKey(name: 'chapters')
   final Object chapters;
   @JsonKey(name: 'authors', defaultValue: <AuthorObject>[])
@@ -10461,8 +10521,6 @@ class AudiobookObject {
   @JsonKey(name: 'total_chapters')
   final int totalChapters;
   static const fromJsonFactory = _$AudiobookObjectFromJson;
-  static const toJsonFactory = _$AudiobookObjectToJson;
-  Map<String, dynamic> toJson() => _$AudiobookObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -10676,6 +10734,9 @@ class SimplifiedAudiobookObject {
   factory SimplifiedAudiobookObject.fromJson(Map<String, dynamic> json) =>
       _$SimplifiedAudiobookObjectFromJson(json);
 
+  static const toJsonFactory = _$SimplifiedAudiobookObjectToJson;
+  Map<String, dynamic> toJson() => _$SimplifiedAudiobookObjectToJson(this);
+
   @JsonKey(name: 'authors', defaultValue: <AuthorObject>[])
   final List<AuthorObject> authors;
   @JsonKey(name: 'available_markets', defaultValue: <String>[])
@@ -10719,8 +10780,6 @@ class SimplifiedAudiobookObject {
   @JsonKey(name: 'total_chapters')
   final int totalChapters;
   static const fromJsonFactory = _$SimplifiedAudiobookObjectFromJson;
-  static const toJsonFactory = _$SimplifiedAudiobookObjectToJson;
-  Map<String, dynamic> toJson() => _$SimplifiedAudiobookObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -10915,15 +10974,13 @@ class AlbumBase {
     this.restrictions,
     required this.type,
     required this.uri,
-    this.copyrights,
-    this.externalIds,
-    this.genres,
-    this.label,
-    this.popularity,
   });
 
   factory AlbumBase.fromJson(Map<String, dynamic> json) =>
       _$AlbumBaseFromJson(json);
+
+  static const toJsonFactory = _$AlbumBaseToJson;
+  Map<String, dynamic> toJson() => _$AlbumBaseToJson(this);
 
   @JsonKey(
     name: 'album_type',
@@ -10963,19 +11020,7 @@ class AlbumBase {
   final enums.AlbumBaseType type;
   @JsonKey(name: 'uri')
   final String uri;
-  @JsonKey(name: 'copyrights', defaultValue: <CopyrightObject>[])
-  final List<CopyrightObject>? copyrights;
-  @JsonKey(name: 'external_ids')
-  final ExternalIdObject? externalIds;
-  @JsonKey(name: 'genres', defaultValue: <String>[])
-  final List<String>? genres;
-  @JsonKey(name: 'label')
-  final String? label;
-  @JsonKey(name: 'popularity')
-  final int? popularity;
   static const fromJsonFactory = _$AlbumBaseFromJson;
-  static const toJsonFactory = _$AlbumBaseToJson;
-  Map<String, dynamic> toJson() => _$AlbumBaseToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -11013,20 +11058,7 @@ class AlbumBase {
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.uri, uri) ||
-                const DeepCollectionEquality().equals(other.uri, uri)) &&
-            (identical(other.copyrights, copyrights) ||
-                const DeepCollectionEquality()
-                    .equals(other.copyrights, copyrights)) &&
-            (identical(other.externalIds, externalIds) ||
-                const DeepCollectionEquality()
-                    .equals(other.externalIds, externalIds)) &&
-            (identical(other.genres, genres) ||
-                const DeepCollectionEquality().equals(other.genres, genres)) &&
-            (identical(other.label, label) ||
-                const DeepCollectionEquality().equals(other.label, label)) &&
-            (identical(other.popularity, popularity) ||
-                const DeepCollectionEquality()
-                    .equals(other.popularity, popularity)));
+                const DeepCollectionEquality().equals(other.uri, uri)));
   }
 
   @override
@@ -11047,11 +11079,6 @@ class AlbumBase {
       const DeepCollectionEquality().hash(restrictions) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(uri) ^
-      const DeepCollectionEquality().hash(copyrights) ^
-      const DeepCollectionEquality().hash(externalIds) ^
-      const DeepCollectionEquality().hash(genres) ^
-      const DeepCollectionEquality().hash(label) ^
-      const DeepCollectionEquality().hash(popularity) ^
       runtimeType.hashCode;
 }
 
@@ -11069,12 +11096,7 @@ extension $AlbumBaseExtension on AlbumBase {
       enums.AlbumBaseReleaseDatePrecision? releaseDatePrecision,
       AlbumRestrictionObject? restrictions,
       enums.AlbumBaseType? type,
-      String? uri,
-      List<CopyrightObject>? copyrights,
-      ExternalIdObject? externalIds,
-      List<String>? genres,
-      String? label,
-      int? popularity}) {
+      String? uri}) {
     return AlbumBase(
         albumType: albumType ?? this.albumType,
         totalTracks: totalTracks ?? this.totalTracks,
@@ -11088,12 +11110,7 @@ extension $AlbumBaseExtension on AlbumBase {
         releaseDatePrecision: releaseDatePrecision ?? this.releaseDatePrecision,
         restrictions: restrictions ?? this.restrictions,
         type: type ?? this.type,
-        uri: uri ?? this.uri,
-        copyrights: copyrights ?? this.copyrights,
-        externalIds: externalIds ?? this.externalIds,
-        genres: genres ?? this.genres,
-        label: label ?? this.label,
-        popularity: popularity ?? this.popularity);
+        uri: uri ?? this.uri);
   }
 
   AlbumBase copyWithWrapped(
@@ -11109,12 +11126,7 @@ extension $AlbumBaseExtension on AlbumBase {
       Wrapped<enums.AlbumBaseReleaseDatePrecision>? releaseDatePrecision,
       Wrapped<AlbumRestrictionObject?>? restrictions,
       Wrapped<enums.AlbumBaseType>? type,
-      Wrapped<String>? uri,
-      Wrapped<List<CopyrightObject>?>? copyrights,
-      Wrapped<ExternalIdObject?>? externalIds,
-      Wrapped<List<String>?>? genres,
-      Wrapped<String?>? label,
-      Wrapped<int?>? popularity}) {
+      Wrapped<String>? uri}) {
     return AlbumBase(
         albumType: (albumType != null ? albumType.value : this.albumType),
         totalTracks:
@@ -11136,13 +11148,7 @@ extension $AlbumBaseExtension on AlbumBase {
         restrictions:
             (restrictions != null ? restrictions.value : this.restrictions),
         type: (type != null ? type.value : this.type),
-        uri: (uri != null ? uri.value : this.uri),
-        copyrights: (copyrights != null ? copyrights.value : this.copyrights),
-        externalIds:
-            (externalIds != null ? externalIds.value : this.externalIds),
-        genres: (genres != null ? genres.value : this.genres),
-        label: (label != null ? label.value : this.label),
-        popularity: (popularity != null ? popularity.value : this.popularity));
+        uri: (uri != null ? uri.value : this.uri));
   }
 }
 
@@ -11164,15 +11170,13 @@ class SimplifiedAlbumObject {
     this.restrictions,
     required this.type,
     required this.uri,
-    this.copyrights,
-    this.externalIds,
-    this.genres,
-    this.label,
-    this.popularity,
   });
 
   factory SimplifiedAlbumObject.fromJson(Map<String, dynamic> json) =>
       _$SimplifiedAlbumObjectFromJson(json);
+
+  static const toJsonFactory = _$SimplifiedAlbumObjectToJson;
+  Map<String, dynamic> toJson() => _$SimplifiedAlbumObjectToJson(this);
 
   @JsonKey(
     name: 'album_group',
@@ -11220,19 +11224,7 @@ class SimplifiedAlbumObject {
   final enums.SimplifiedAlbumObjectType type;
   @JsonKey(name: 'uri')
   final String uri;
-  @JsonKey(name: 'copyrights', defaultValue: <CopyrightObject>[])
-  final List<CopyrightObject>? copyrights;
-  @JsonKey(name: 'external_ids')
-  final ExternalIdObject? externalIds;
-  @JsonKey(name: 'genres', defaultValue: <String>[])
-  final List<String>? genres;
-  @JsonKey(name: 'label')
-  final String? label;
-  @JsonKey(name: 'popularity')
-  final int? popularity;
   static const fromJsonFactory = _$SimplifiedAlbumObjectFromJson;
-  static const toJsonFactory = _$SimplifiedAlbumObjectToJson;
-  Map<String, dynamic> toJson() => _$SimplifiedAlbumObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -11276,20 +11268,7 @@ class SimplifiedAlbumObject {
             (identical(other.type, type) ||
                 const DeepCollectionEquality().equals(other.type, type)) &&
             (identical(other.uri, uri) ||
-                const DeepCollectionEquality().equals(other.uri, uri)) &&
-            (identical(other.copyrights, copyrights) ||
-                const DeepCollectionEquality()
-                    .equals(other.copyrights, copyrights)) &&
-            (identical(other.externalIds, externalIds) ||
-                const DeepCollectionEquality()
-                    .equals(other.externalIds, externalIds)) &&
-            (identical(other.genres, genres) ||
-                const DeepCollectionEquality().equals(other.genres, genres)) &&
-            (identical(other.label, label) ||
-                const DeepCollectionEquality().equals(other.label, label)) &&
-            (identical(other.popularity, popularity) ||
-                const DeepCollectionEquality()
-                    .equals(other.popularity, popularity)));
+                const DeepCollectionEquality().equals(other.uri, uri)));
   }
 
   @override
@@ -11312,11 +11291,6 @@ class SimplifiedAlbumObject {
       const DeepCollectionEquality().hash(restrictions) ^
       const DeepCollectionEquality().hash(type) ^
       const DeepCollectionEquality().hash(uri) ^
-      const DeepCollectionEquality().hash(copyrights) ^
-      const DeepCollectionEquality().hash(externalIds) ^
-      const DeepCollectionEquality().hash(genres) ^
-      const DeepCollectionEquality().hash(label) ^
-      const DeepCollectionEquality().hash(popularity) ^
       runtimeType.hashCode;
 }
 
@@ -11336,12 +11310,7 @@ extension $SimplifiedAlbumObjectExtension on SimplifiedAlbumObject {
       enums.SimplifiedAlbumObjectReleaseDatePrecision? releaseDatePrecision,
       AlbumRestrictionObject? restrictions,
       enums.SimplifiedAlbumObjectType? type,
-      String? uri,
-      List<CopyrightObject>? copyrights,
-      ExternalIdObject? externalIds,
-      List<String>? genres,
-      String? label,
-      int? popularity}) {
+      String? uri}) {
     return SimplifiedAlbumObject(
         albumGroup: albumGroup ?? this.albumGroup,
         artists: artists ?? this.artists,
@@ -11357,12 +11326,7 @@ extension $SimplifiedAlbumObjectExtension on SimplifiedAlbumObject {
         releaseDatePrecision: releaseDatePrecision ?? this.releaseDatePrecision,
         restrictions: restrictions ?? this.restrictions,
         type: type ?? this.type,
-        uri: uri ?? this.uri,
-        copyrights: copyrights ?? this.copyrights,
-        externalIds: externalIds ?? this.externalIds,
-        genres: genres ?? this.genres,
-        label: label ?? this.label,
-        popularity: popularity ?? this.popularity);
+        uri: uri ?? this.uri);
   }
 
   SimplifiedAlbumObject copyWithWrapped(
@@ -11381,12 +11345,7 @@ extension $SimplifiedAlbumObjectExtension on SimplifiedAlbumObject {
           releaseDatePrecision,
       Wrapped<AlbumRestrictionObject?>? restrictions,
       Wrapped<enums.SimplifiedAlbumObjectType>? type,
-      Wrapped<String>? uri,
-      Wrapped<List<CopyrightObject>?>? copyrights,
-      Wrapped<ExternalIdObject?>? externalIds,
-      Wrapped<List<String>?>? genres,
-      Wrapped<String?>? label,
-      Wrapped<int?>? popularity}) {
+      Wrapped<String>? uri}) {
     return SimplifiedAlbumObject(
         albumGroup: (albumGroup != null ? albumGroup.value : this.albumGroup),
         artists: (artists != null ? artists.value : this.artists),
@@ -11410,13 +11369,7 @@ extension $SimplifiedAlbumObjectExtension on SimplifiedAlbumObject {
         restrictions:
             (restrictions != null ? restrictions.value : this.restrictions),
         type: (type != null ? type.value : this.type),
-        uri: (uri != null ? uri.value : this.uri),
-        copyrights: (copyrights != null ? copyrights.value : this.copyrights),
-        externalIds:
-            (externalIds != null ? externalIds.value : this.externalIds),
-        genres: (genres != null ? genres.value : this.genres),
-        label: (label != null ? label.value : this.label),
-        popularity: (popularity != null ? popularity.value : this.popularity));
+        uri: (uri != null ? uri.value : this.uri));
   }
 }
 
@@ -11448,6 +11401,9 @@ class ChapterObject {
 
   factory ChapterObject.fromJson(Map<String, dynamic> json) =>
       _$ChapterObjectFromJson(json);
+
+  static const toJsonFactory = _$ChapterObjectToJson;
+  Map<String, dynamic> toJson() => _$ChapterObjectToJson(this);
 
   @JsonKey(name: 'audiobook')
   final SimplifiedAudiobookObject audiobook;
@@ -11500,8 +11456,6 @@ class ChapterObject {
   @JsonKey(name: 'restrictions')
   final ChapterRestrictionObject? restrictions;
   static const fromJsonFactory = _$ChapterObjectFromJson;
-  static const toJsonFactory = _$ChapterObjectToJson;
-  Map<String, dynamic> toJson() => _$ChapterObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -11731,6 +11685,9 @@ class SimplifiedChapterObject {
   factory SimplifiedChapterObject.fromJson(Map<String, dynamic> json) =>
       _$SimplifiedChapterObjectFromJson(json);
 
+  static const toJsonFactory = _$SimplifiedChapterObjectToJson;
+  Map<String, dynamic> toJson() => _$SimplifiedChapterObjectToJson(this);
+
   @JsonKey(name: 'audio_preview_url')
   final String audioPreviewUrl;
   @JsonKey(name: 'available_markets', defaultValue: <String>[])
@@ -11780,8 +11737,6 @@ class SimplifiedChapterObject {
   @JsonKey(name: 'restrictions')
   final ChapterRestrictionObject? restrictions;
   static const fromJsonFactory = _$SimplifiedChapterObjectFromJson;
-  static const toJsonFactory = _$SimplifiedChapterObjectToJson;
-  Map<String, dynamic> toJson() => _$SimplifiedChapterObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12004,6 +11959,9 @@ class ChapterBase {
   factory ChapterBase.fromJson(Map<String, dynamic> json) =>
       _$ChapterBaseFromJson(json);
 
+  static const toJsonFactory = _$ChapterBaseToJson;
+  Map<String, dynamic> toJson() => _$ChapterBaseToJson(this);
+
   @JsonKey(name: 'audio_preview_url')
   final String audioPreviewUrl;
   @JsonKey(name: 'available_markets', defaultValue: <String>[])
@@ -12053,8 +12011,6 @@ class ChapterBase {
   @JsonKey(name: 'restrictions')
   final ChapterRestrictionObject? restrictions;
   static const fromJsonFactory = _$ChapterBaseFromJson;
-  static const toJsonFactory = _$ChapterBaseToJson;
-  Map<String, dynamic> toJson() => _$ChapterBaseToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12276,6 +12232,9 @@ class AlbumObject {
   factory AlbumObject.fromJson(Map<String, dynamic> json) =>
       _$AlbumObjectFromJson(json);
 
+  static const toJsonFactory = _$AlbumObjectToJson;
+  Map<String, dynamic> toJson() => _$AlbumObjectToJson(this);
+
   @JsonKey(name: 'artists', defaultValue: <SimplifiedArtistObject>[])
   final List<SimplifiedArtistObject>? artists;
   @JsonKey(name: 'tracks')
@@ -12329,8 +12288,6 @@ class AlbumObject {
   @JsonKey(name: 'uri')
   final String uri;
   static const fromJsonFactory = _$AlbumObjectFromJson;
-  static const toJsonFactory = _$AlbumObjectToJson;
-  Map<String, dynamic> toJson() => _$AlbumObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12528,6 +12485,9 @@ class ContextObject {
   factory ContextObject.fromJson(Map<String, dynamic> json) =>
       _$ContextObjectFromJson(json);
 
+  static const toJsonFactory = _$ContextObjectToJson;
+  Map<String, dynamic> toJson() => _$ContextObjectToJson(this);
+
   @JsonKey(name: 'type')
   final String? type;
   @JsonKey(name: 'href')
@@ -12537,8 +12497,6 @@ class ContextObject {
   @JsonKey(name: 'uri')
   final String? uri;
   static const fromJsonFactory = _$ContextObjectFromJson;
-  static const toJsonFactory = _$ContextObjectToJson;
-  Map<String, dynamic> toJson() => _$ContextObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12604,13 +12562,14 @@ class CopyrightObject {
   factory CopyrightObject.fromJson(Map<String, dynamic> json) =>
       _$CopyrightObjectFromJson(json);
 
+  static const toJsonFactory = _$CopyrightObjectToJson;
+  Map<String, dynamic> toJson() => _$CopyrightObjectToJson(this);
+
   @JsonKey(name: 'text')
   final String? text;
   @JsonKey(name: 'type')
   final String? type;
   static const fromJsonFactory = _$CopyrightObjectFromJson;
-  static const toJsonFactory = _$CopyrightObjectToJson;
-  Map<String, dynamic> toJson() => _$CopyrightObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12654,11 +12613,12 @@ class AuthorObject {
   factory AuthorObject.fromJson(Map<String, dynamic> json) =>
       _$AuthorObjectFromJson(json);
 
+  static const toJsonFactory = _$AuthorObjectToJson;
+  Map<String, dynamic> toJson() => _$AuthorObjectToJson(this);
+
   @JsonKey(name: 'name')
   final String? name;
   static const fromJsonFactory = _$AuthorObjectFromJson;
-  static const toJsonFactory = _$AuthorObjectToJson;
-  Map<String, dynamic> toJson() => _$AuthorObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12695,11 +12655,12 @@ class NarratorObject {
   factory NarratorObject.fromJson(Map<String, dynamic> json) =>
       _$NarratorObjectFromJson(json);
 
+  static const toJsonFactory = _$NarratorObjectToJson;
+  Map<String, dynamic> toJson() => _$NarratorObjectToJson(this);
+
   @JsonKey(name: 'name')
   final String? name;
   static const fromJsonFactory = _$NarratorObjectFromJson;
-  static const toJsonFactory = _$NarratorObjectToJson;
-  Map<String, dynamic> toJson() => _$NarratorObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12738,6 +12699,9 @@ class ExternalIdObject {
   factory ExternalIdObject.fromJson(Map<String, dynamic> json) =>
       _$ExternalIdObjectFromJson(json);
 
+  static const toJsonFactory = _$ExternalIdObjectToJson;
+  Map<String, dynamic> toJson() => _$ExternalIdObjectToJson(this);
+
   @JsonKey(name: 'isrc')
   final String? isrc;
   @JsonKey(name: 'ean')
@@ -12745,8 +12709,6 @@ class ExternalIdObject {
   @JsonKey(name: 'upc')
   final String? upc;
   static const fromJsonFactory = _$ExternalIdObjectFromJson;
-  static const toJsonFactory = _$ExternalIdObjectToJson;
-  Map<String, dynamic> toJson() => _$ExternalIdObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12795,11 +12757,12 @@ class ExternalUrlObject {
   factory ExternalUrlObject.fromJson(Map<String, dynamic> json) =>
       _$ExternalUrlObjectFromJson(json);
 
+  static const toJsonFactory = _$ExternalUrlObjectToJson;
+  Map<String, dynamic> toJson() => _$ExternalUrlObjectToJson(this);
+
   @JsonKey(name: 'spotify')
   final String? spotify;
   static const fromJsonFactory = _$ExternalUrlObjectFromJson;
-  static const toJsonFactory = _$ExternalUrlObjectToJson;
-  Map<String, dynamic> toJson() => _$ExternalUrlObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12838,13 +12801,14 @@ class FollowersObject {
   factory FollowersObject.fromJson(Map<String, dynamic> json) =>
       _$FollowersObjectFromJson(json);
 
+  static const toJsonFactory = _$FollowersObjectToJson;
+  Map<String, dynamic> toJson() => _$FollowersObjectToJson(this);
+
   @JsonKey(name: 'href')
   final String? href;
   @JsonKey(name: 'total')
   final int? total;
   static const fromJsonFactory = _$FollowersObjectFromJson;
-  static const toJsonFactory = _$FollowersObjectToJson;
-  Map<String, dynamic> toJson() => _$FollowersObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12890,6 +12854,9 @@ class ImageObject {
   factory ImageObject.fromJson(Map<String, dynamic> json) =>
       _$ImageObjectFromJson(json);
 
+  static const toJsonFactory = _$ImageObjectToJson;
+  Map<String, dynamic> toJson() => _$ImageObjectToJson(this);
+
   @JsonKey(name: 'url')
   final String url;
   @JsonKey(name: 'height')
@@ -12897,8 +12864,6 @@ class ImageObject {
   @JsonKey(name: 'width')
   final int? width;
   static const fromJsonFactory = _$ImageObjectFromJson;
-  static const toJsonFactory = _$ImageObjectToJson;
-  Map<String, dynamic> toJson() => _$ImageObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -12950,13 +12915,14 @@ class ExplicitContentSettingsObject {
   factory ExplicitContentSettingsObject.fromJson(Map<String, dynamic> json) =>
       _$ExplicitContentSettingsObjectFromJson(json);
 
+  static const toJsonFactory = _$ExplicitContentSettingsObjectToJson;
+  Map<String, dynamic> toJson() => _$ExplicitContentSettingsObjectToJson(this);
+
   @JsonKey(name: 'filter_enabled')
   final bool? filterEnabled;
   @JsonKey(name: 'filter_locked')
   final bool? filterLocked;
   static const fromJsonFactory = _$ExplicitContentSettingsObjectFromJson;
-  static const toJsonFactory = _$ExplicitContentSettingsObjectToJson;
-  Map<String, dynamic> toJson() => _$ExplicitContentSettingsObjectToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -13003,19 +12969,20 @@ extension $ExplicitContentSettingsObjectExtension
 class SavedAudiobookObject {
   SavedAudiobookObject({
     this.addedAt,
-    this.album,
+    this.audiobook,
   });
 
   factory SavedAudiobookObject.fromJson(Map<String, dynamic> json) =>
       _$SavedAudiobookObjectFromJson(json);
 
-  @JsonKey(name: 'added_at')
-  final DateTime? addedAt;
-  @JsonKey(name: 'album')
-  final AudiobookObject? album;
-  static const fromJsonFactory = _$SavedAudiobookObjectFromJson;
   static const toJsonFactory = _$SavedAudiobookObjectToJson;
   Map<String, dynamic> toJson() => _$SavedAudiobookObjectToJson(this);
+
+  @JsonKey(name: 'added_at')
+  final DateTime? addedAt;
+  @JsonKey(name: 'audiobook')
+  final AudiobookObject? audiobook;
+  static const fromJsonFactory = _$SavedAudiobookObjectFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -13024,8 +12991,9 @@ class SavedAudiobookObject {
             (identical(other.addedAt, addedAt) ||
                 const DeepCollectionEquality()
                     .equals(other.addedAt, addedAt)) &&
-            (identical(other.album, album) ||
-                const DeepCollectionEquality().equals(other.album, album)));
+            (identical(other.audiobook, audiobook) ||
+                const DeepCollectionEquality()
+                    .equals(other.audiobook, audiobook)));
   }
 
   @override
@@ -13034,21 +13002,131 @@ class SavedAudiobookObject {
   @override
   int get hashCode =>
       const DeepCollectionEquality().hash(addedAt) ^
-      const DeepCollectionEquality().hash(album) ^
+      const DeepCollectionEquality().hash(audiobook) ^
       runtimeType.hashCode;
 }
 
 extension $SavedAudiobookObjectExtension on SavedAudiobookObject {
-  SavedAudiobookObject copyWith({DateTime? addedAt, AudiobookObject? album}) {
+  SavedAudiobookObject copyWith(
+      {DateTime? addedAt, AudiobookObject? audiobook}) {
     return SavedAudiobookObject(
-        addedAt: addedAt ?? this.addedAt, album: album ?? this.album);
+        addedAt: addedAt ?? this.addedAt,
+        audiobook: audiobook ?? this.audiobook);
   }
 
   SavedAudiobookObject copyWithWrapped(
-      {Wrapped<DateTime?>? addedAt, Wrapped<AudiobookObject?>? album}) {
+      {Wrapped<DateTime?>? addedAt, Wrapped<AudiobookObject?>? audiobook}) {
     return SavedAudiobookObject(
         addedAt: (addedAt != null ? addedAt.value : this.addedAt),
-        album: (album != null ? album.value : this.album));
+        audiobook: (audiobook != null ? audiobook.value : this.audiobook));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class PagingSavedAudiobookObject {
+  PagingSavedAudiobookObject({
+    required this.items,
+    required this.href,
+    required this.limit,
+    required this.next,
+    required this.offset,
+    required this.previous,
+    required this.total,
+  });
+
+  factory PagingSavedAudiobookObject.fromJson(Map<String, dynamic> json) =>
+      _$PagingSavedAudiobookObjectFromJson(json);
+
+  static const toJsonFactory = _$PagingSavedAudiobookObjectToJson;
+  Map<String, dynamic> toJson() => _$PagingSavedAudiobookObjectToJson(this);
+
+  @JsonKey(name: 'items', defaultValue: <SavedAudiobookObject>[])
+  final List<SavedAudiobookObject> items;
+  @JsonKey(name: 'href')
+  final String href;
+  @JsonKey(name: 'limit')
+  final int limit;
+  @JsonKey(name: 'next')
+  final String? next;
+  @JsonKey(name: 'offset')
+  final int offset;
+  @JsonKey(name: 'previous')
+  final String? previous;
+  @JsonKey(name: 'total')
+  final int total;
+  static const fromJsonFactory = _$PagingSavedAudiobookObjectFromJson;
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is PagingSavedAudiobookObject &&
+            (identical(other.items, items) ||
+                const DeepCollectionEquality().equals(other.items, items)) &&
+            (identical(other.href, href) ||
+                const DeepCollectionEquality().equals(other.href, href)) &&
+            (identical(other.limit, limit) ||
+                const DeepCollectionEquality().equals(other.limit, limit)) &&
+            (identical(other.next, next) ||
+                const DeepCollectionEquality().equals(other.next, next)) &&
+            (identical(other.offset, offset) ||
+                const DeepCollectionEquality().equals(other.offset, offset)) &&
+            (identical(other.previous, previous) ||
+                const DeepCollectionEquality()
+                    .equals(other.previous, previous)) &&
+            (identical(other.total, total) ||
+                const DeepCollectionEquality().equals(other.total, total)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(items) ^
+      const DeepCollectionEquality().hash(href) ^
+      const DeepCollectionEquality().hash(limit) ^
+      const DeepCollectionEquality().hash(next) ^
+      const DeepCollectionEquality().hash(offset) ^
+      const DeepCollectionEquality().hash(previous) ^
+      const DeepCollectionEquality().hash(total) ^
+      runtimeType.hashCode;
+}
+
+extension $PagingSavedAudiobookObjectExtension on PagingSavedAudiobookObject {
+  PagingSavedAudiobookObject copyWith(
+      {List<SavedAudiobookObject>? items,
+      String? href,
+      int? limit,
+      String? next,
+      int? offset,
+      String? previous,
+      int? total}) {
+    return PagingSavedAudiobookObject(
+        items: items ?? this.items,
+        href: href ?? this.href,
+        limit: limit ?? this.limit,
+        next: next ?? this.next,
+        offset: offset ?? this.offset,
+        previous: previous ?? this.previous,
+        total: total ?? this.total);
+  }
+
+  PagingSavedAudiobookObject copyWithWrapped(
+      {Wrapped<List<SavedAudiobookObject>>? items,
+      Wrapped<String>? href,
+      Wrapped<int>? limit,
+      Wrapped<String?>? next,
+      Wrapped<int>? offset,
+      Wrapped<String?>? previous,
+      Wrapped<int>? total}) {
+    return PagingSavedAudiobookObject(
+        items: (items != null ? items.value : this.items),
+        href: (href != null ? href.value : this.href),
+        limit: (limit != null ? limit.value : this.limit),
+        next: (next != null ? next.value : this.next),
+        offset: (offset != null ? offset.value : this.offset),
+        previous: (previous != null ? previous.value : this.previous),
+        total: (total != null ? total.value : this.total));
   }
 }
 
@@ -13067,6 +13145,9 @@ class AudioAnalysisObject$Meta {
   factory AudioAnalysisObject$Meta.fromJson(Map<String, dynamic> json) =>
       _$AudioAnalysisObject$MetaFromJson(json);
 
+  static const toJsonFactory = _$AudioAnalysisObject$MetaToJson;
+  Map<String, dynamic> toJson() => _$AudioAnalysisObject$MetaToJson(this);
+
   @JsonKey(name: 'analyzer_version')
   final String? analyzerVersion;
   @JsonKey(name: 'platform')
@@ -13082,8 +13163,6 @@ class AudioAnalysisObject$Meta {
   @JsonKey(name: 'input_process')
   final String? inputProcess;
   static const fromJsonFactory = _$AudioAnalysisObject$MetaFromJson;
-  static const toJsonFactory = _$AudioAnalysisObject$MetaToJson;
-  Map<String, dynamic> toJson() => _$AudioAnalysisObject$MetaToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -13205,6 +13284,9 @@ class AudioAnalysisObject$Track {
   factory AudioAnalysisObject$Track.fromJson(Map<String, dynamic> json) =>
       _$AudioAnalysisObject$TrackFromJson(json);
 
+  static const toJsonFactory = _$AudioAnalysisObject$TrackToJson;
+  Map<String, dynamic> toJson() => _$AudioAnalysisObject$TrackToJson(this);
+
   @JsonKey(name: 'num_samples')
   final int? numSamples;
   @JsonKey(name: 'duration')
@@ -13258,8 +13340,6 @@ class AudioAnalysisObject$Track {
   @JsonKey(name: 'rhythm_version')
   final double? rhythmVersion;
   static const fromJsonFactory = _$AudioAnalysisObject$TrackFromJson;
-  static const toJsonFactory = _$AudioAnalysisObject$TrackToJson;
-  Map<String, dynamic> toJson() => _$AudioAnalysisObject$TrackToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -15711,11 +15791,12 @@ class Unauthorized {
   factory Unauthorized.fromJson(Map<String, dynamic> json) =>
       _$UnauthorizedFromJson(json);
 
+  static const toJsonFactory = _$UnauthorizedToJson;
+  Map<String, dynamic> toJson() => _$UnauthorizedToJson(this);
+
   @JsonKey(name: 'error')
   final ErrorObject error;
   static const fromJsonFactory = _$UnauthorizedFromJson;
-  static const toJsonFactory = _$UnauthorizedToJson;
-  Map<String, dynamic> toJson() => _$UnauthorizedToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -15752,11 +15833,12 @@ class Forbidden {
   factory Forbidden.fromJson(Map<String, dynamic> json) =>
       _$ForbiddenFromJson(json);
 
+  static const toJsonFactory = _$ForbiddenToJson;
+  Map<String, dynamic> toJson() => _$ForbiddenToJson(this);
+
   @JsonKey(name: 'error')
   final ErrorObject error;
   static const fromJsonFactory = _$ForbiddenFromJson;
-  static const toJsonFactory = _$ForbiddenToJson;
-  Map<String, dynamic> toJson() => _$ForbiddenToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -15785,6 +15867,90 @@ extension $ForbiddenExtension on Forbidden {
 }
 
 @JsonSerializable(explicitToJson: true)
+class NotFound {
+  NotFound({
+    required this.error,
+  });
+
+  factory NotFound.fromJson(Map<String, dynamic> json) =>
+      _$NotFoundFromJson(json);
+
+  static const toJsonFactory = _$NotFoundToJson;
+  Map<String, dynamic> toJson() => _$NotFoundToJson(this);
+
+  @JsonKey(name: 'error')
+  final ErrorObject error;
+  static const fromJsonFactory = _$NotFoundFromJson;
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is NotFound &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(error) ^ runtimeType.hashCode;
+}
+
+extension $NotFoundExtension on NotFound {
+  NotFound copyWith({ErrorObject? error}) {
+    return NotFound(error: error ?? this.error);
+  }
+
+  NotFound copyWithWrapped({Wrapped<ErrorObject>? error}) {
+    return NotFound(error: (error != null ? error.value : this.error));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
+class BadRequest {
+  BadRequest({
+    required this.error,
+  });
+
+  factory BadRequest.fromJson(Map<String, dynamic> json) =>
+      _$BadRequestFromJson(json);
+
+  static const toJsonFactory = _$BadRequestToJson;
+  Map<String, dynamic> toJson() => _$BadRequestToJson(this);
+
+  @JsonKey(name: 'error')
+  final ErrorObject error;
+  static const fromJsonFactory = _$BadRequestFromJson;
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is BadRequest &&
+            (identical(other.error, error) ||
+                const DeepCollectionEquality().equals(other.error, error)));
+  }
+
+  @override
+  String toString() => jsonEncode(this);
+
+  @override
+  int get hashCode =>
+      const DeepCollectionEquality().hash(error) ^ runtimeType.hashCode;
+}
+
+extension $BadRequestExtension on BadRequest {
+  BadRequest copyWith({ErrorObject? error}) {
+    return BadRequest(error: error ?? this.error);
+  }
+
+  BadRequest copyWithWrapped({Wrapped<ErrorObject>? error}) {
+    return BadRequest(error: (error != null ? error.value : this.error));
+  }
+}
+
+@JsonSerializable(explicitToJson: true)
 class TooManyRequests {
   TooManyRequests({
     required this.error,
@@ -15793,11 +15959,12 @@ class TooManyRequests {
   factory TooManyRequests.fromJson(Map<String, dynamic> json) =>
       _$TooManyRequestsFromJson(json);
 
+  static const toJsonFactory = _$TooManyRequestsToJson;
+  Map<String, dynamic> toJson() => _$TooManyRequestsToJson(this);
+
   @JsonKey(name: 'error')
   final ErrorObject error;
   static const fromJsonFactory = _$TooManyRequestsFromJson;
-  static const toJsonFactory = _$TooManyRequestsToJson;
-  Map<String, dynamic> toJson() => _$TooManyRequestsToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -15834,11 +16001,12 @@ class ManyAlbums {
   factory ManyAlbums.fromJson(Map<String, dynamic> json) =>
       _$ManyAlbumsFromJson(json);
 
+  static const toJsonFactory = _$ManyAlbumsToJson;
+  Map<String, dynamic> toJson() => _$ManyAlbumsToJson(this);
+
   @JsonKey(name: 'albums', defaultValue: <AlbumObject>[])
   final List<AlbumObject> albums;
   static const fromJsonFactory = _$ManyAlbumsFromJson;
-  static const toJsonFactory = _$ManyAlbumsToJson;
-  Map<String, dynamic> toJson() => _$ManyAlbumsToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -15875,11 +16043,12 @@ class ManyAudiobooks {
   factory ManyAudiobooks.fromJson(Map<String, dynamic> json) =>
       _$ManyAudiobooksFromJson(json);
 
+  static const toJsonFactory = _$ManyAudiobooksToJson;
+  Map<String, dynamic> toJson() => _$ManyAudiobooksToJson(this);
+
   @JsonKey(name: 'audiobooks', defaultValue: <AudiobookObject>[])
   final List<AudiobookObject> audiobooks;
   static const fromJsonFactory = _$ManyAudiobooksFromJson;
-  static const toJsonFactory = _$ManyAudiobooksToJson;
-  Map<String, dynamic> toJson() => _$ManyAudiobooksToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -15918,11 +16087,12 @@ class ManyChapters {
   factory ManyChapters.fromJson(Map<String, dynamic> json) =>
       _$ManyChaptersFromJson(json);
 
+  static const toJsonFactory = _$ManyChaptersToJson;
+  Map<String, dynamic> toJson() => _$ManyChaptersToJson(this);
+
   @JsonKey(name: 'chapters', defaultValue: <ChapterObject>[])
   final List<ChapterObject> chapters;
   static const fromJsonFactory = _$ManyChaptersFromJson;
-  static const toJsonFactory = _$ManyChaptersToJson;
-  Map<String, dynamic> toJson() => _$ManyChaptersToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -15961,11 +16131,12 @@ class PagedAlbums {
   factory PagedAlbums.fromJson(Map<String, dynamic> json) =>
       _$PagedAlbumsFromJson(json);
 
+  static const toJsonFactory = _$PagedAlbumsToJson;
+  Map<String, dynamic> toJson() => _$PagedAlbumsToJson(this);
+
   @JsonKey(name: 'albums')
   final PagingSimplifiedAlbumObject albums;
   static const fromJsonFactory = _$PagedAlbumsFromJson;
-  static const toJsonFactory = _$PagedAlbumsToJson;
-  Map<String, dynamic> toJson() => _$PagedAlbumsToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16002,11 +16173,12 @@ class PagedCategories {
   factory PagedCategories.fromJson(Map<String, dynamic> json) =>
       _$PagedCategoriesFromJson(json);
 
+  static const toJsonFactory = _$PagedCategoriesToJson;
+  Map<String, dynamic> toJson() => _$PagedCategoriesToJson(this);
+
   @JsonKey(name: 'categories')
   final dynamic categories;
   static const fromJsonFactory = _$PagedCategoriesFromJson;
-  static const toJsonFactory = _$PagedCategoriesToJson;
-  Map<String, dynamic> toJson() => _$PagedCategoriesToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16045,11 +16217,12 @@ class CursorPagedArtists {
   factory CursorPagedArtists.fromJson(Map<String, dynamic> json) =>
       _$CursorPagedArtistsFromJson(json);
 
+  static const toJsonFactory = _$CursorPagedArtistsToJson;
+  Map<String, dynamic> toJson() => _$CursorPagedArtistsToJson(this);
+
   @JsonKey(name: 'artists')
   final CursorPagingSimplifiedArtistObject artists;
   static const fromJsonFactory = _$CursorPagedArtistsFromJson;
-  static const toJsonFactory = _$CursorPagedArtistsToJson;
-  Map<String, dynamic> toJson() => _$CursorPagedArtistsToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16088,11 +16261,12 @@ class ManyArtists {
   factory ManyArtists.fromJson(Map<String, dynamic> json) =>
       _$ManyArtistsFromJson(json);
 
+  static const toJsonFactory = _$ManyArtistsToJson;
+  Map<String, dynamic> toJson() => _$ManyArtistsToJson(this);
+
   @JsonKey(name: 'artists', defaultValue: <ArtistObject>[])
   final List<ArtistObject> artists;
   static const fromJsonFactory = _$ManyArtistsFromJson;
-  static const toJsonFactory = _$ManyArtistsToJson;
-  Map<String, dynamic> toJson() => _$ManyArtistsToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16130,11 +16304,12 @@ class ManyAudioFeatures {
   factory ManyAudioFeatures.fromJson(Map<String, dynamic> json) =>
       _$ManyAudioFeaturesFromJson(json);
 
+  static const toJsonFactory = _$ManyAudioFeaturesToJson;
+  Map<String, dynamic> toJson() => _$ManyAudioFeaturesToJson(this);
+
   @JsonKey(name: 'audio_features', defaultValue: <AudioFeaturesObject>[])
   final List<AudioFeaturesObject> audioFeatures;
   static const fromJsonFactory = _$ManyAudioFeaturesFromJson;
-  static const toJsonFactory = _$ManyAudioFeaturesToJson;
-  Map<String, dynamic> toJson() => _$ManyAudioFeaturesToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16176,11 +16351,12 @@ class ManyEpisodes {
   factory ManyEpisodes.fromJson(Map<String, dynamic> json) =>
       _$ManyEpisodesFromJson(json);
 
+  static const toJsonFactory = _$ManyEpisodesToJson;
+  Map<String, dynamic> toJson() => _$ManyEpisodesToJson(this);
+
   @JsonKey(name: 'episodes', defaultValue: <EpisodeObject>[])
   final List<EpisodeObject> episodes;
   static const fromJsonFactory = _$ManyEpisodesFromJson;
-  static const toJsonFactory = _$ManyEpisodesToJson;
-  Map<String, dynamic> toJson() => _$ManyEpisodesToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16219,11 +16395,12 @@ class ManyGenres {
   factory ManyGenres.fromJson(Map<String, dynamic> json) =>
       _$ManyGenresFromJson(json);
 
+  static const toJsonFactory = _$ManyGenresToJson;
+  Map<String, dynamic> toJson() => _$ManyGenresToJson(this);
+
   @JsonKey(name: 'genres', defaultValue: <String>[])
   final List<String> genres;
   static const fromJsonFactory = _$ManyGenresFromJson;
-  static const toJsonFactory = _$ManyGenresToJson;
-  Map<String, dynamic> toJson() => _$ManyGenresToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16262,11 +16439,12 @@ class ManyTracks {
   factory ManyTracks.fromJson(Map<String, dynamic> json) =>
       _$ManyTracksFromJson(json);
 
+  static const toJsonFactory = _$ManyTracksToJson;
+  Map<String, dynamic> toJson() => _$ManyTracksToJson(this);
+
   @JsonKey(name: 'tracks', defaultValue: <TrackObject>[])
   final List<TrackObject> tracks;
   static const fromJsonFactory = _$ManyTracksFromJson;
-  static const toJsonFactory = _$ManyTracksToJson;
-  Map<String, dynamic> toJson() => _$ManyTracksToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16303,11 +16481,12 @@ class ManySimplifiedShows {
   factory ManySimplifiedShows.fromJson(Map<String, dynamic> json) =>
       _$ManySimplifiedShowsFromJson(json);
 
+  static const toJsonFactory = _$ManySimplifiedShowsToJson;
+  Map<String, dynamic> toJson() => _$ManySimplifiedShowsToJson(this);
+
   @JsonKey(name: 'shows', defaultValue: <SimplifiedShowObject>[])
   final List<SimplifiedShowObject> shows;
   static const fromJsonFactory = _$ManySimplifiedShowsFromJson;
-  static const toJsonFactory = _$ManySimplifiedShowsToJson;
-  Map<String, dynamic> toJson() => _$ManySimplifiedShowsToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16352,6 +16531,9 @@ class SearchItems {
   factory SearchItems.fromJson(Map<String, dynamic> json) =>
       _$SearchItemsFromJson(json);
 
+  static const toJsonFactory = _$SearchItemsToJson;
+  Map<String, dynamic> toJson() => _$SearchItemsToJson(this);
+
   @JsonKey(name: 'tracks')
   final PagingTrackObject? tracks;
   @JsonKey(name: 'artists')
@@ -16367,8 +16549,6 @@ class SearchItems {
   @JsonKey(name: 'audiobooks')
   final PagingSimplifiedAudiobookObject? audiobooks;
   static const fromJsonFactory = _$SearchItemsFromJson;
-  static const toJsonFactory = _$SearchItemsToJson;
-  Map<String, dynamic> toJson() => _$SearchItemsToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16458,11 +16638,12 @@ class PlaylistSnapshotId {
   factory PlaylistSnapshotId.fromJson(Map<String, dynamic> json) =>
       _$PlaylistSnapshotIdFromJson(json);
 
+  static const toJsonFactory = _$PlaylistSnapshotIdToJson;
+  Map<String, dynamic> toJson() => _$PlaylistSnapshotIdToJson(this);
+
   @JsonKey(name: 'snapshot_id')
   final String? snapshotId;
   static const fromJsonFactory = _$PlaylistSnapshotIdFromJson;
-  static const toJsonFactory = _$PlaylistSnapshotIdToJson;
-  Map<String, dynamic> toJson() => _$PlaylistSnapshotIdToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16501,11 +16682,12 @@ class Markets {
   factory Markets.fromJson(Map<String, dynamic> json) =>
       _$MarketsFromJson(json);
 
+  static const toJsonFactory = _$MarketsToJson;
+  Map<String, dynamic> toJson() => _$MarketsToJson(this);
+
   @JsonKey(name: 'markets', defaultValue: <String>[])
   final List<String>? markets;
   static const fromJsonFactory = _$MarketsFromJson;
-  static const toJsonFactory = _$MarketsToJson;
-  Map<String, dynamic> toJson() => _$MarketsToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16546,6 +16728,10 @@ class PlaylistsPlaylistIdPut$RequestBody {
           Map<String, dynamic> json) =>
       _$PlaylistsPlaylistIdPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$PlaylistsPlaylistIdPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$PlaylistsPlaylistIdPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'name')
   final String? name;
   @JsonKey(name: 'public')
@@ -16555,9 +16741,6 @@ class PlaylistsPlaylistIdPut$RequestBody {
   @JsonKey(name: 'description')
   final String? description;
   static const fromJsonFactory = _$PlaylistsPlaylistIdPut$RequestBodyFromJson;
-  static const toJsonFactory = _$PlaylistsPlaylistIdPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$PlaylistsPlaylistIdPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16624,16 +16807,17 @@ class PlaylistsPlaylistIdTracksPost$RequestBody {
           Map<String, dynamic> json) =>
       _$PlaylistsPlaylistIdTracksPost$RequestBodyFromJson(json);
 
+  static const toJsonFactory =
+      _$PlaylistsPlaylistIdTracksPost$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$PlaylistsPlaylistIdTracksPost$RequestBodyToJson(this);
+
   @JsonKey(name: 'uris', defaultValue: <String>[])
   final List<String>? uris;
   @JsonKey(name: 'position')
   final int? position;
   static const fromJsonFactory =
       _$PlaylistsPlaylistIdTracksPost$RequestBodyFromJson;
-  static const toJsonFactory =
-      _$PlaylistsPlaylistIdTracksPost$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$PlaylistsPlaylistIdTracksPost$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16686,6 +16870,10 @@ class PlaylistsPlaylistIdTracksPut$RequestBody {
           Map<String, dynamic> json) =>
       _$PlaylistsPlaylistIdTracksPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$PlaylistsPlaylistIdTracksPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$PlaylistsPlaylistIdTracksPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'uris', defaultValue: <String>[])
   final List<String>? uris;
   @JsonKey(name: 'range_start')
@@ -16698,9 +16886,6 @@ class PlaylistsPlaylistIdTracksPut$RequestBody {
   final String? snapshotId;
   static const fromJsonFactory =
       _$PlaylistsPlaylistIdTracksPut$RequestBodyFromJson;
-  static const toJsonFactory = _$PlaylistsPlaylistIdTracksPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$PlaylistsPlaylistIdTracksPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16779,18 +16964,19 @@ class PlaylistsPlaylistIdTracksDelete$RequestBody {
           Map<String, dynamic> json) =>
       _$PlaylistsPlaylistIdTracksDelete$RequestBodyFromJson(json);
 
-  @JsonKey(
-      name: 'tracks',
-      defaultValue: <PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks>[])
-  final List<PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks> tracks;
-  @JsonKey(name: 'snapshot_id')
-  final String? snapshotId;
-  static const fromJsonFactory =
-      _$PlaylistsPlaylistIdTracksDelete$RequestBodyFromJson;
   static const toJsonFactory =
       _$PlaylistsPlaylistIdTracksDelete$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$PlaylistsPlaylistIdTracksDelete$RequestBodyToJson(this);
+
+  @JsonKey(
+      name: 'tracks',
+      defaultValue: <PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$Item>[])
+  final List<PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$Item> tracks;
+  @JsonKey(name: 'snapshot_id')
+  final String? snapshotId;
+  static const fromJsonFactory =
+      _$PlaylistsPlaylistIdTracksDelete$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -16816,7 +17002,7 @@ class PlaylistsPlaylistIdTracksDelete$RequestBody {
 extension $PlaylistsPlaylistIdTracksDelete$RequestBodyExtension
     on PlaylistsPlaylistIdTracksDelete$RequestBody {
   PlaylistsPlaylistIdTracksDelete$RequestBody copyWith(
-      {List<PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks>? tracks,
+      {List<PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$Item>? tracks,
       String? snapshotId}) {
     return PlaylistsPlaylistIdTracksDelete$RequestBody(
         tracks: tracks ?? this.tracks,
@@ -16824,7 +17010,7 @@ extension $PlaylistsPlaylistIdTracksDelete$RequestBodyExtension
   }
 
   PlaylistsPlaylistIdTracksDelete$RequestBody copyWithWrapped(
-      {Wrapped<List<PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks>>?
+      {Wrapped<List<PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$Item>>?
           tracks,
       Wrapped<String?>? snapshotId}) {
     return PlaylistsPlaylistIdTracksDelete$RequestBody(
@@ -16842,11 +17028,12 @@ class MeAlbumsPut$RequestBody {
   factory MeAlbumsPut$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MeAlbumsPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MeAlbumsPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MeAlbumsPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'ids', defaultValue: <String>[])
   final List<String>? ids;
   static const fromJsonFactory = _$MeAlbumsPut$RequestBodyFromJson;
-  static const toJsonFactory = _$MeAlbumsPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MeAlbumsPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16883,11 +17070,12 @@ class MeAlbumsDelete$RequestBody {
   factory MeAlbumsDelete$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MeAlbumsDelete$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MeAlbumsDelete$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MeAlbumsDelete$RequestBodyToJson(this);
+
   @JsonKey(name: 'ids', defaultValue: <String>[])
   final List<String>? ids;
   static const fromJsonFactory = _$MeAlbumsDelete$RequestBodyFromJson;
-  static const toJsonFactory = _$MeAlbumsDelete$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MeAlbumsDelete$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16925,11 +17113,12 @@ class MeTracksPut$RequestBody {
   factory MeTracksPut$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MeTracksPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MeTracksPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MeTracksPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'ids', defaultValue: <String>[])
   final List<String> ids;
   static const fromJsonFactory = _$MeTracksPut$RequestBodyFromJson;
-  static const toJsonFactory = _$MeTracksPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MeTracksPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -16966,11 +17155,12 @@ class MeTracksDelete$RequestBody {
   factory MeTracksDelete$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MeTracksDelete$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MeTracksDelete$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MeTracksDelete$RequestBodyToJson(this);
+
   @JsonKey(name: 'ids', defaultValue: <String>[])
   final List<String>? ids;
   static const fromJsonFactory = _$MeTracksDelete$RequestBodyFromJson;
-  static const toJsonFactory = _$MeTracksDelete$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MeTracksDelete$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17008,11 +17198,12 @@ class MeEpisodesPut$RequestBody {
   factory MeEpisodesPut$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MeEpisodesPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MeEpisodesPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MeEpisodesPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'ids', defaultValue: <String>[])
   final List<String> ids;
   static const fromJsonFactory = _$MeEpisodesPut$RequestBodyFromJson;
-  static const toJsonFactory = _$MeEpisodesPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MeEpisodesPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17049,11 +17240,12 @@ class MeEpisodesDelete$RequestBody {
   factory MeEpisodesDelete$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MeEpisodesDelete$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MeEpisodesDelete$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MeEpisodesDelete$RequestBodyToJson(this);
+
   @JsonKey(name: 'ids', defaultValue: <String>[])
   final List<String>? ids;
   static const fromJsonFactory = _$MeEpisodesDelete$RequestBodyFromJson;
-  static const toJsonFactory = _$MeEpisodesDelete$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MeEpisodesDelete$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17092,11 +17284,12 @@ class MeShowsPut$RequestBody {
   factory MeShowsPut$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MeShowsPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MeShowsPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MeShowsPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'ids', defaultValue: <String>[])
   final List<String>? ids;
   static const fromJsonFactory = _$MeShowsPut$RequestBodyFromJson;
-  static const toJsonFactory = _$MeShowsPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MeShowsPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17133,11 +17326,12 @@ class MeShowsDelete$RequestBody {
   factory MeShowsDelete$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MeShowsDelete$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MeShowsDelete$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MeShowsDelete$RequestBodyToJson(this);
+
   @JsonKey(name: 'ids', defaultValue: <String>[])
   final List<String>? ids;
   static const fromJsonFactory = _$MeShowsDelete$RequestBodyFromJson;
-  static const toJsonFactory = _$MeShowsDelete$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MeShowsDelete$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17178,6 +17372,10 @@ class UsersUserIdPlaylistsPost$RequestBody {
           Map<String, dynamic> json) =>
       _$UsersUserIdPlaylistsPost$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$UsersUserIdPlaylistsPost$RequestBodyToJson;
+  Map<String, dynamic> toJson() =>
+      _$UsersUserIdPlaylistsPost$RequestBodyToJson(this);
+
   @JsonKey(name: 'name')
   final String name;
   @JsonKey(name: 'public')
@@ -17187,9 +17385,6 @@ class UsersUserIdPlaylistsPost$RequestBody {
   @JsonKey(name: 'description')
   final String? description;
   static const fromJsonFactory = _$UsersUserIdPlaylistsPost$RequestBodyFromJson;
-  static const toJsonFactory = _$UsersUserIdPlaylistsPost$RequestBodyToJson;
-  Map<String, dynamic> toJson() =>
-      _$UsersUserIdPlaylistsPost$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17255,14 +17450,15 @@ class PlaylistsPlaylistIdFollowersPut$RequestBody {
           Map<String, dynamic> json) =>
       _$PlaylistsPlaylistIdFollowersPut$RequestBodyFromJson(json);
 
-  @JsonKey(name: 'public')
-  final bool? public;
-  static const fromJsonFactory =
-      _$PlaylistsPlaylistIdFollowersPut$RequestBodyFromJson;
   static const toJsonFactory =
       _$PlaylistsPlaylistIdFollowersPut$RequestBodyToJson;
   Map<String, dynamic> toJson() =>
       _$PlaylistsPlaylistIdFollowersPut$RequestBodyToJson(this);
+
+  @JsonKey(name: 'public')
+  final bool? public;
+  static const fromJsonFactory =
+      _$PlaylistsPlaylistIdFollowersPut$RequestBodyFromJson;
 
   @override
   bool operator ==(dynamic other) {
@@ -17303,11 +17499,12 @@ class MeFollowingPut$RequestBody {
   factory MeFollowingPut$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MeFollowingPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MeFollowingPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MeFollowingPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'ids', defaultValue: <String>[])
   final List<String> ids;
   static const fromJsonFactory = _$MeFollowingPut$RequestBodyFromJson;
-  static const toJsonFactory = _$MeFollowingPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MeFollowingPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17345,11 +17542,12 @@ class MeFollowingDelete$RequestBody {
   factory MeFollowingDelete$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MeFollowingDelete$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MeFollowingDelete$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MeFollowingDelete$RequestBodyToJson(this);
+
   @JsonKey(name: 'ids', defaultValue: <String>[])
   final List<String>? ids;
   static const fromJsonFactory = _$MeFollowingDelete$RequestBodyFromJson;
-  static const toJsonFactory = _$MeFollowingDelete$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MeFollowingDelete$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17389,13 +17587,14 @@ class MePlayerPut$RequestBody {
   factory MePlayerPut$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MePlayerPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MePlayerPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MePlayerPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'device_ids', defaultValue: <String>[])
   final List<String> deviceIds;
   @JsonKey(name: 'play')
   final bool? play;
   static const fromJsonFactory = _$MePlayerPut$RequestBodyFromJson;
-  static const toJsonFactory = _$MePlayerPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MePlayerPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17444,6 +17643,9 @@ class MePlayerPlayPut$RequestBody {
   factory MePlayerPlayPut$RequestBody.fromJson(Map<String, dynamic> json) =>
       _$MePlayerPlayPut$RequestBodyFromJson(json);
 
+  static const toJsonFactory = _$MePlayerPlayPut$RequestBodyToJson;
+  Map<String, dynamic> toJson() => _$MePlayerPlayPut$RequestBodyToJson(this);
+
   @JsonKey(name: 'context_uri')
   final String? contextUri;
   @JsonKey(name: 'uris', defaultValue: <String>[])
@@ -17453,8 +17655,6 @@ class MePlayerPlayPut$RequestBody {
   @JsonKey(name: 'position_ms')
   final int? positionMs;
   static const fromJsonFactory = _$MePlayerPlayPut$RequestBodyFromJson;
-  static const toJsonFactory = _$MePlayerPlayPut$RequestBodyToJson;
-  Map<String, dynamic> toJson() => _$MePlayerPlayPut$RequestBodyToJson(this);
 
   @override
   bool operator ==(dynamic other) {
@@ -17523,14 +17723,15 @@ class PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$Item {
           Map<String, dynamic> json) =>
       _$PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$ItemFromJson(json);
 
-  @JsonKey(name: 'uri')
-  final String? uri;
-  static const fromJsonFactory =
-      _$PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$ItemFromJson;
   static const toJsonFactory =
       _$PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$ItemToJson;
   Map<String, dynamic> toJson() =>
       _$PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$ItemToJson(this);
+
+  @JsonKey(name: 'uri')
+  final String? uri;
+  static const fromJsonFactory =
+      _$PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$ItemFromJson;
 
   @override
   bool operator ==(dynamic other) {

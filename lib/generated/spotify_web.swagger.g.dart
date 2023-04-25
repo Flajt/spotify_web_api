@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'SpotifyWeb.swagger.dart';
+part of 'spotify_web.swagger.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
@@ -2167,20 +2167,6 @@ AlbumBase _$AlbumBaseFromJson(Map<String, dynamic> json) => AlbumBase(
               json['restrictions'] as Map<String, dynamic>),
       type: albumBaseTypeFromJson(json['type']),
       uri: json['uri'] as String,
-      copyrights: (json['copyrights'] as List<dynamic>?)
-              ?.map((e) => CopyrightObject.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          [],
-      externalIds: json['external_ids'] == null
-          ? null
-          : ExternalIdObject.fromJson(
-              json['external_ids'] as Map<String, dynamic>),
-      genres: (json['genres'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          [],
-      label: json['label'] as String?,
-      popularity: json['popularity'] as int?,
     );
 
 Map<String, dynamic> _$AlbumBaseToJson(AlbumBase instance) => <String, dynamic>{
@@ -2198,11 +2184,6 @@ Map<String, dynamic> _$AlbumBaseToJson(AlbumBase instance) => <String, dynamic>{
       'restrictions': instance.restrictions?.toJson(),
       'type': albumBaseTypeToJson(instance.type),
       'uri': instance.uri,
-      'copyrights': instance.copyrights?.map((e) => e.toJson()).toList(),
-      'external_ids': instance.externalIds?.toJson(),
-      'genres': instance.genres,
-      'label': instance.label,
-      'popularity': instance.popularity,
     };
 
 SimplifiedAlbumObject _$SimplifiedAlbumObjectFromJson(
@@ -2238,20 +2219,6 @@ SimplifiedAlbumObject _$SimplifiedAlbumObjectFromJson(
               json['restrictions'] as Map<String, dynamic>),
       type: simplifiedAlbumObjectTypeFromJson(json['type']),
       uri: json['uri'] as String,
-      copyrights: (json['copyrights'] as List<dynamic>?)
-              ?.map((e) => CopyrightObject.fromJson(e as Map<String, dynamic>))
-              .toList() ??
-          [],
-      externalIds: json['external_ids'] == null
-          ? null
-          : ExternalIdObject.fromJson(
-              json['external_ids'] as Map<String, dynamic>),
-      genres: (json['genres'] as List<dynamic>?)
-              ?.map((e) => e as String)
-              .toList() ??
-          [],
-      label: json['label'] as String?,
-      popularity: json['popularity'] as int?,
     );
 
 Map<String, dynamic> _$SimplifiedAlbumObjectToJson(
@@ -2273,11 +2240,6 @@ Map<String, dynamic> _$SimplifiedAlbumObjectToJson(
       'restrictions': instance.restrictions?.toJson(),
       'type': simplifiedAlbumObjectTypeToJson(instance.type),
       'uri': instance.uri,
-      'copyrights': instance.copyrights?.map((e) => e.toJson()).toList(),
-      'external_ids': instance.externalIds?.toJson(),
-      'genres': instance.genres,
-      'label': instance.label,
-      'popularity': instance.popularity,
     };
 
 ChapterObject _$ChapterObjectFromJson(Map<String, dynamic> json) =>
@@ -2671,16 +2633,44 @@ SavedAudiobookObject _$SavedAudiobookObjectFromJson(
       addedAt: json['added_at'] == null
           ? null
           : DateTime.parse(json['added_at'] as String),
-      album: json['album'] == null
+      audiobook: json['audiobook'] == null
           ? null
-          : AudiobookObject.fromJson(json['album'] as Map<String, dynamic>),
+          : AudiobookObject.fromJson(json['audiobook'] as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$SavedAudiobookObjectToJson(
         SavedAudiobookObject instance) =>
     <String, dynamic>{
       'added_at': instance.addedAt?.toIso8601String(),
-      'album': instance.album?.toJson(),
+      'audiobook': instance.audiobook?.toJson(),
+    };
+
+PagingSavedAudiobookObject _$PagingSavedAudiobookObjectFromJson(
+        Map<String, dynamic> json) =>
+    PagingSavedAudiobookObject(
+      items: (json['items'] as List<dynamic>?)
+              ?.map((e) =>
+                  SavedAudiobookObject.fromJson(e as Map<String, dynamic>))
+              .toList() ??
+          [],
+      href: json['href'] as String,
+      limit: json['limit'] as int,
+      next: json['next'] as String?,
+      offset: json['offset'] as int,
+      previous: json['previous'] as String?,
+      total: json['total'] as int,
+    );
+
+Map<String, dynamic> _$PagingSavedAudiobookObjectToJson(
+        PagingSavedAudiobookObject instance) =>
+    <String, dynamic>{
+      'items': instance.items.map((e) => e.toJson()).toList(),
+      'href': instance.href,
+      'limit': instance.limit,
+      'next': instance.next,
+      'offset': instance.offset,
+      'previous': instance.previous,
+      'total': instance.total,
     };
 
 AudioAnalysisObject$Meta _$AudioAnalysisObject$MetaFromJson(
@@ -2784,6 +2774,23 @@ Forbidden _$ForbiddenFromJson(Map<String, dynamic> json) => Forbidden(
     );
 
 Map<String, dynamic> _$ForbiddenToJson(Forbidden instance) => <String, dynamic>{
+      'error': instance.error.toJson(),
+    };
+
+NotFound _$NotFoundFromJson(Map<String, dynamic> json) => NotFound(
+      error: ErrorObject.fromJson(json['error'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$NotFoundToJson(NotFound instance) => <String, dynamic>{
+      'error': instance.error.toJson(),
+    };
+
+BadRequest _$BadRequestFromJson(Map<String, dynamic> json) => BadRequest(
+      error: ErrorObject.fromJson(json['error'] as Map<String, dynamic>),
+    );
+
+Map<String, dynamic> _$BadRequestToJson(BadRequest instance) =>
+    <String, dynamic>{
       'error': instance.error.toJson(),
     };
 
@@ -3069,11 +3076,9 @@ PlaylistsPlaylistIdTracksDelete$RequestBody
             Map<String, dynamic> json) =>
         PlaylistsPlaylistIdTracksDelete$RequestBody(
           tracks: (json['tracks'] as List<dynamic>?)
-                  ?.map((e) => (e as List<dynamic>)
-                      .map((e) =>
-                          PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$Item
-                              .fromJson(e as Map<String, dynamic>))
-                      .toList())
+                  ?.map((e) =>
+                      PlaylistsPlaylistIdTracksDelete$RequestBody$Tracks$Item
+                          .fromJson(e as Map<String, dynamic>))
                   .toList() ??
               [],
           snapshotId: json['snapshot_id'] as String?,
@@ -3082,9 +3087,7 @@ PlaylistsPlaylistIdTracksDelete$RequestBody
 Map<String, dynamic> _$PlaylistsPlaylistIdTracksDelete$RequestBodyToJson(
         PlaylistsPlaylistIdTracksDelete$RequestBody instance) =>
     <String, dynamic>{
-      'tracks': instance.tracks
-          .map((e) => e.map((e) => e.toJson()).toList())
-          .toList(),
+      'tracks': instance.tracks.map((e) => e.toJson()).toList(),
       'snapshot_id': instance.snapshotId,
     };
 

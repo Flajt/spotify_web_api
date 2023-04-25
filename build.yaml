@@ -11,7 +11,8 @@ targets:
       swagger_dart_code_generator:
         options:
           input_folder: "lib/openapi/"
-          output_folder: "lib/logic/generated/"
+          output_folder: "lib/generated/"
           with_base_url: true
           with_converter: true
-    
+          #input_urls:
+          #  - "https://raw.githubusercontent.com/sonallux/spotify-web-api/main/fixed-spotify-open-api.yml"    

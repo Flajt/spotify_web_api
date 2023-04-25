@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'SpotifyWeb.swagger.dart';
+part of 'spotify_web.swagger.dart';
 
 // **************************************************************************
 // ChopperGenerator

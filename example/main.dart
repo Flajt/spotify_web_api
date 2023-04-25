@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
               final SpotifyWeb spotifyWeb = SpotifyWeb.create(
                   interceptors: [SpotifyAuthInterceptor("my-jwt-here")],
                   baseUrl: Uri.parse("https://api.spotify.com/v1"));
+              spotifyWeb.meGet();
             },
             child: const Text("Don't Press")),
       )),

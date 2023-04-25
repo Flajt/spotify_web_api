@@ -1,1 +1,1 @@
-export 'SpotifyWeb.swagger.dart' show SpotifyWeb;
+export 'spotify_web.swagger.dart' show SpotifyWeb;
